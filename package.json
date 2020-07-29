@@ -1,0 +1,22 @@
+{
+  "name": "landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "next": "9.3.1",
+    "react": "16.13.1",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-dom": "16.13.1",
+    "react-github-buttons": "^0.4.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}

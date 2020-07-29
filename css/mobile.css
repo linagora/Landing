@@ -1,0 +1,209 @@
+@media (max-width:420px) {
+    #product .channelImage{
+        max-width: 100%;
+    }
+    .description{
+        font-size: 15px;
+    }
+    .channelImage{
+        margin: 32px auto;
+    }
+    .discussion{
+        margin-top:0px;
+    }
+    .discussion .message{
+        max-width: 100%;
+    }
+    #pricing .pricingBlock{
+        width: 280px;
+         margin: 20px 0px;
+    }
+    #pricing .nameFeature{
+        font-size: 15px;
+    }
+    #pricing .col-lg-12{
+        padding-left:0px!important;
+        padding-right:0px!important;
+    }
+    #product .linkInsideBlock {
+      overflow: scroll;
+      max-width: 100vw;
+      padding: 0 20px;
+      white-space: nowrap;
+    }
+    #product .demoImg {
+      border-radius: 4px;
+    }
+    #product .demoImgBloc{
+        width: 100%;
+        height: 15vh;
+    }
+    #landing .highlight{
+        margin: 8px auto;
+        display: table;
+    }
+    #product .squareBackground{
+        padding:32px 32px;
+    }
+    #product .mailInvitationCalendar{
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    #product .mailInvitationCalendar {
+        /* margin-top:32px; */
+    }
+    #product .mailInvitationCalendar .calendarBloc{
+        width:94px;
+    }
+    #product .mailInvitationCalendar .calendarBloc .titleCalendar{
+        font-size: 9px;
+    }
+    #product .mailInvitationCalendar .calendarBloc .clock{
+        font-size : 8px;
+    }
+    #product .mailInvitationCalendar .invitations{
+        margin-left : 20px;
+    }
+    #product .documentEditionBlock{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    #product .documentEditionBlock .documentEdition .document{
+        margin : 0px 12px;
+        margin : 0px 12px;
+    }
+    #product .documentEditionBlock .documentEdition .document .fileImage{
+        width: 76px;
+        height: 92px;
+    }
+    #product .documentEditionBlock .documentEdition .document .user{
+        width: 25px;
+        height: 25px;
+        margin-right: -13px;
+    }
+    #product .versionFile{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    #product .versionFile .versionBlock .date,#product .versionFile .nameFile,.versionFile .versionBlock .blockFile .sizeFile{
+        font-size : 7.8px;
+        line-height : normal !important;
+        padding : 8px 0px;
+    }
+    #product .versionFile .versionBlock .imgHistory{
+        width : 11px;
+        margin: 0px 8px;
+    }
+    #product .versionFile .versionBlock .blockFile .fileImg{
+        width: 13px;
+    }
+    #product .versionFile .versionBlock .blockFile{
+        min-width: 163px;
+    }
+    #product .versionFile .versionBlock.versionBlock1{
+        margin-left: 24px;
+    }
+    #product .versionFile .versionBlock.versionBlock2{
+        margin-left: 42px;
+    }
+
+    #product .secureLink .blocSecure{
+        border-radius: 3px;
+    }
+    #product .secureLink .blocSecure svg, .secureLink .blocSecure img{
+        width: 15px !important;
+        height: 15px;
+        margin:12px !important;
+    }
+    #product .secureLink .blocSecure svg{
+        margin-right: 6px!important;
+    }
+    #product .secureLink .blocSecure img{
+        margin-left:6px !important;
+    }
+    #product .secureLink .blocSecure .loader .loaderInside{
+        height: 10px;
+        margin: 15px 0px;
+    }
+    #product .secureLink .buttonSecure{
+        margin-top: 12px;
+        height: 26px;
+        line-height: normal;
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-size: 10px;
+    }
+    #product .secureLink .buttonSecure .imgCursor{
+        width: 13px;
+        bottom: -9px;
+    }
+
+    #product .taskTeam .members .profileImage{
+        width: 22.4px;
+        height: 22.4px;
+        border-radius: 5.6px;
+    }
+    #product .taskTeam .members .name, .taskTeam .members .username{
+        font-size: 11.2px;
+    }
+    #product .taskTeam .members .check{
+        width: 8.4px;
+        height: 8.4px;
+        margin-top: 7px;
+        margin-right: 10px;
+    }
+    #product .taskTeam .divider{
+        margin: 10px 8px;
+    }
+    #product .deadlineBlock{
+        margin-left : 0px !important;
+    }
+    #product .deadline_calendar .deadline img{
+        width: 14px;
+        height: 14px;
+        margin-top: -5px;
+        margin-right: 2px;
+    }
+    #product .deadline_calendar_all .deadline{
+        font-size: 14.4px;
+        padding: 5.2px;
+        height: 29px;
+        width: 100%;
+    }
+    .todolistGlobal{
+        margin-top:-70px;
+        margin-bottom:-40px;
+    }
+    .todolistGlobal .column{
+        transform : scale(0.7);
+    }
+
+    #downloadPage .sectionWithScreen .title{
+        margin-top  :0px;
+    }
+    #downloadPage .btnBloc a{
+        margin : 16px 8px;
+    }
+    #product .history .whiteMessage{
+        margin-left:0px;
+    }
+    #product .history .marginLeft27{
+        margin-left:0px;
+    }
+
+    .displayNoneForMobile, .nomobile {
+        display: none;
+    }
+}
+
+@keyframes columAnimationMobile {
+    20%{transform : translateX(-50px)scale(0.5);}
+    28.3%{transform : translateX(-150px)scale(0.5);}
+    35%{transform : translateX(-250px)scale(0.5);}
+
+    70%{transform : translateX(-250px)scale(0.5);}
+    76.3%{transform : translateX(-150px)scale(0.5);}
+    85%{transform : translateX(-50px)scale(0.5);}
+
+    100%{transform : translateX(-50px)scale(0.5);}
+}

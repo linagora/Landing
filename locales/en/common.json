@@ -1,0 +1,41 @@
+{
+  "demo": {
+    "demoTitle": "Book a demo",
+    "subTitle": "Personalized Twake tour",
+    "text": "Whether you have a question about Twake features, trials, pricing, need a demo, or anything else, our sales team is ready to answer all your questions."
+  },
+  "pricing": {
+    "pricingTitle": "PRICING",
+    "titleSub": "An offer for each project",
+    "monthly": "Monthly",
+    "anual": "Annual",
+    "free": "Free",
+    "forever": "forever",
+    "1workspace": "1 workspace",
+    "limitedhistory": "History of limited messages",
+    "gostorage": "Go of storage",
+    "unlimitedstorage": "Unlimited storage",
+    "mailSupport": "Support by email",
+    "useForFree": "Use for free",
+    "byUserByMonth": "by users and by month",
+    "unlimitedWorkspace": "Unlimited workspaces",
+    "unlimitedMessage": "Unlimited messages",
+    "premiumIntegration": "Premium integrations",
+    "freeCopain": "Guests collaborators",
+    "phoneSupport": "Phone support",
+    "freeTry": "Free Trial",
+    "faq": "Frequently Asked Questions",
+    "canITry": "Can I try for free?",
+    "canITryR": "Yes, you can test the standard subscriptions free of charge and without obligation for 1 month, no payment will be required.",
+    "adaptation": "My subscription adapts if I increase or decrease my team?",
+    "adaptationR": "If you add or remove a member of your company, the subscription will update automatically. The following billing will take into account these changes.",
+    "secure": "Is my data secure?",
+    "secureR": "All of your files are encrypted with the AES-256 algorithm. All data are saved on servers in European Union.",
+    "extern": "Can I invite external users?",
+    "externR": "Of course ! You can invite external users with limited access to one of your chat channels or access to your entire workspace. Your external users are not charged.",
+    "onpremise": "Can I install Twake on my servers?",
+    "onpremiseR": "We have an on-premise offer, for more information contact us at contact@twakeapp.com or request a demo via the website.",
+    "tryEasy": "Try Twake now, it's easy!",
+    "tryNow": "Try it now"
+  }
+}
