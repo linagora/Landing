@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install -g yarn
-      - run: yarn export
+      - run: yarn export && ./scripts/after_export.sh
       - name: Upload frontend build artifact
         uses: actions/upload-artifact@v1
         with:

@@ -50,7 +50,7 @@ const Footer = ({ t, getLang }) => {
                 <a
                   className="linkFooter"
                   target="_blank"
-                  href="https://doc.twake.app/twake"
+                  href="https://doc.twake.app/"
                 >
                   {t({ router: router }, "documentation")}
                 </a>

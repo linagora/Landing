@@ -42,7 +42,7 @@ const Header = ({ t, scrolled, getLang }) => {
             </Nav.Item>
             <NavDropdown title={t({ router: router }, "community")} id="basic-nav-dropdown">
               <NavDropdown.Item href={"/" + getLang({ router: router }) + "/" + "contribute"}>{t({ router: router }, "contribute")}</NavDropdown.Item>
-              <NavDropdown.Item href="https://doc.twake.app/Twake">{t({ router: router }, "documentation")}</NavDropdown.Item>
+              <NavDropdown.Item href="https://doc.twake.app/">{t({ router: router }, "documentation")}</NavDropdown.Item>
               <NavDropdown.Item href="https://community.twake.app">{t({ router: router }, "forum")}</NavDropdown.Item>
             </NavDropdown>
           </Nav>
