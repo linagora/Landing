@@ -49,7 +49,7 @@ const Download = props => {
                     <div className="btnBloc">
                       <a
                         id="submitFormButtonForCapterra"
-                        href={"/application/" + nameMac}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameMac}
                         className="btn btn-purple"
                         rel="nofollow"
                         target="_blank"
@@ -113,7 +113,7 @@ const Download = props => {
                       <a
                         id="submitFormButtonForCapterra"
                         className="otherLink i18n"
-                        href={"/application/" + nameWindow}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameWindow}
                         rel="nofollow"
                         target="_blank"
                       >
@@ -122,7 +122,7 @@ const Download = props => {
                       <a
                         id="submitFormButtonForCapterra"
                         className="otherLink i18n"
-                        href={"/application/" + nameLinux}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameLinux}
                         rel="nofollow"
                         target="_blank"
                       >
@@ -134,7 +134,7 @@ const Download = props => {
                     <div className="btnBloc">
                       <a
                         id="submitFormButtonForCapterra"
-                        href={"/application/" + nameLinux}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameLinux}
                         rel="nofollow"
                         target="_blank"
                         className="btn btn-purple"
@@ -198,7 +198,7 @@ const Download = props => {
                       <a
                         id="submitFormButtonForCapterra"
                         className="otherLink i18n"
-                        href={"/application/" + nameWindow}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameWindow}
                         rel="nofollow"
                         target="_blank"
                       >
@@ -207,7 +207,7 @@ const Download = props => {
                       <a
                         id="submitFormButtonForCapterra"
                         className="otherLink i18n"
-                        href={"/application/" + nameMac}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameMac}
                         rel="nofollow"
                         target="_blank"
                       >
@@ -219,7 +219,7 @@ const Download = props => {
                     <div className="btnBloc">
                       <a
                         id="submitFormButtonForCapterra"
-                        href={"/application/" + nameWindow}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameWindow}
                         rel="nofollow"
                         target="_blank"
                         className="btn btn-purple"
@@ -283,7 +283,7 @@ const Download = props => {
                       <a
                         id="submitFormButtonForCapterra"
                         className="otherLink i18n"
-                        href={"/application/" + nameMac}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameMac}
                         rel="nofollow"
                         target="_blank"
                       >
@@ -292,7 +292,7 @@ const Download = props => {
                       <a
                         id="submitFormButtonForCapterra"
                         className="otherLink i18n"
-                        href={"/application/" + nameLinux}
+                        href={"https://public-medias-downloads.s3.eu-west-3.amazonaws.com/desktop/" + nameLinux}
                         rel="nofollow"
                         target="_blank"
                       >
