@@ -68,6 +68,13 @@ const Footer = ({ t, getLang }) => {
                 >
                   {t({ router: router }, "changelog")}
                 </a>
+                <a
+                  className="linkFooter"
+                  target="_blank"
+                  href="https://www.notion.so/Twake-Public-Roadmap-7c52a3afd0de4b6b8eee1d08e0a9d8b9"
+                >
+                  {t({ router: router }, "roadmap")}
+                </a>
               </div>
               <div className="col-lg-3">
                 <div className="footerTitle">
