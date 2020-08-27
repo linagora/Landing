@@ -1,15 +1,14 @@
 import { withTranslation } from "../../i18n";
 import Layout from "../../components/layout/layout";
 import { useEffect } from "react";
+import useHubspotForm from '@aaronhayes/react-use-hubspot-form';
 
 const Demo = props => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+	const { loaded, error, formCreated } = useHubspotForm({
+		portalId: '5865592',
+		formId: '7ddb2595-6a13-4c39-9e18-b0d880e82ac1',
+		target: '#my-hubspot-form'
+	});
   return (
     <Layout page={"demonstrationTitle"}>
       <div
@@ -35,8 +34,9 @@ const Demo = props => {
             <div className="row">
               <div className="col-lg-12">
                 <div
-                  className="meetings-iframe-container"
-                  data-src="https://meetings.hubspot.com/benoit20?embed=true"
+                  id="my-hubspot-form"
+									style={{display:"block",maxWidth:"600px",margin:"auto"}}
+                  data-src=""
                 ></div>
               </div>
             </div>
