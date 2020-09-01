@@ -10,7 +10,7 @@ export default () =>(
             <div className="channelTitle">Général</div>
         </div>
         <div className="titleApplication" style={{"marginTop":"14px"}}>
-            Developpment
+            Development
         </div>
         <div className="channel">
             <img className="channelEmoji" src="/medias/icons/emoji_4.png" alt=""/>

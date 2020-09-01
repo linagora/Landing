@@ -41,7 +41,7 @@ export default ()=>(
             <div className="channelTitle">Général</div>
         </div>
         <div className="titleApplication">
-            Developpment
+            Development
         </div>
         <div className="channel">
             <div className="channelEmoji" style={{backgroundImage:"url(/medias/icons/emoji_4.png)"}} alt=""></div>
