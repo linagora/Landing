@@ -83,56 +83,30 @@ class Home extends React.Component {
                     </div>
                     <div className="customers d-none d-lg-block">
                       <div className="">
-                        <img
-                          className="customer"
-                          src="/medias/customers/total.png"
-                          alt=""
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title="Total"
-                        />
-                        <img
-                          className="customer"
-                          src="/medias/customers/nancy.png"
-                          alt=""
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title="Grand Nancy"
-                        />
-                        <img
-                          className="customer"
-                          src="/medias/customers/CVA.png"
-                          alt=""
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title="CVA"
-                        />
-                      </div>
-                      <div className="">
-                        <img
-                          className="customer"
-                          src="/medias/customers/univ-lorraine.png"
-                          alt=""
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title="UL"
-                        />
-                        <img
-                          className="customer"
-                          src="/medias/customers/luxembourg.png"
-                          alt="Ministère du Luxembourg"
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title="Ministère du Luxembourg"
-                        />
-                        <img
-                          className="customer"
-                          src="/medias/customers/algoreg.png"
-                          alt=""
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title="Algoreg"
-                        />
+											<img
+												className="customer"
+												src="/medias/customers/CVA.png"
+												alt=""
+												data-toggle="tooltip"
+												data-placement="bottom"
+												title="CVA"
+											/>
+											<img
+												className="customer"
+												src="/medias/customers/univ-lorraine.png"
+												alt=""
+												data-toggle="tooltip"
+												data-placement="bottom"
+												title="UL"
+											/>
+											<img
+												className="customer"
+												src="/medias/customers/ingen.png"
+												alt="INGEN"
+												data-toggle="tooltip"
+												data-placement="bottom"
+												title="INGEN"
+											/>
                       </div>
                     </div>
                   </div>
@@ -191,31 +165,13 @@ class Home extends React.Component {
                     <div className="" style={{ textAlign: "center" }}>
                       <img
                         className="customer"
-                        src="/medias/customers/total.png"
-                        alt=""
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="Total"
-                      />
-                      <img
-                        className="customer"
-                        src="/medias/customers/edf.png"
-                        alt=""
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="EDF"
-                      />
-                      <img
-                        className="customer"
                         src="/medias/customers/CVA.png"
                         alt=""
                         data-toggle="tooltip"
                         data-placement="bottom"
                         title="CVA"
                       />
-                    </div>
-                    <div className="" style={{ textAlign: "center" }}>
-                      <img
+											<img
                         className="customer"
                         src="/medias/customers/univ-lorraine.png"
                         alt=""
@@ -225,19 +181,11 @@ class Home extends React.Component {
                       />
                       <img
                         className="customer"
-                        src="/medias/customers/luxembourg.png"
-                        alt="Ministère du Luxembourg"
+                        src="/medias/customers/ingen.png"
+                        alt="INGEN"
                         data-toggle="tooltip"
                         data-placement="bottom"
-                        title="Ministère du Luxembourg"
-                      />
-                      <img
-                        className="customer"
-                        src="/medias/customers/algoreg.png"
-                        alt=""
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="Algoreg"
+                        title="INGEN"
                       />
                     </div>
                   </div>
@@ -435,7 +383,7 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
-          <section>
+          <section className="sectionWithLiteBackground">
             <div className="container">
               <div className="row">
                 <div className="col-lg-12">
@@ -464,59 +412,61 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
-          <section className="sectionWithLiteBackground">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="subline">
-                    {this.props.t(this.props, "review_are_important")}
-                  </div>
-                  <div
-                    className="col-lg-12 line"
-                    style={{ marginBottom: "24px" }}
-                  >
-                    {this.props.t(this.props, "review_title")}
-                  </div>
-                </div>
-                <div className="col-lg-12 offset-lg-0 textCenter row">
-                  {(
-                    Array.from(
-                      this.props.t(this.props, "reviews", {
-                        returnObjects: true
-                      })
-                    ) || []
-                  ).map(review => {
-                    return (
-                      <div className="col-lg-4 review_parent">
-                        <div className="review">
-                          <div
-                            className="review-head"
-                            style={{
-                              backgroundImage: "url('" + review.head + "')"
-                            }}
-                          ></div>
-                          <div className="customer-title">
-                            <div className="review-title">
-                              {review.name}
-                              <br />
-                              <span className="company">{review.company}</span>
-                            </div>
-                          </div>
-                          <div
-                            className="review-text"
-                            style={{ marginBottom: "8px" }}
-                          >
-                            {review.message}
-                          </div>
-                          {this.renderNote(review)}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </section>
+          {
+					// 	<section className="sectionWithLiteBackground">
+          //   <div className="container">
+          //     <div className="row">
+          //       <div className="col-lg-12">
+          //         <div className="subline">
+          //           {this.props.t(this.props, "review_are_important")}
+          //         </div>
+          //         <div
+          //           className="col-lg-12 line"
+          //           style={{ marginBottom: "24px" }}
+          //         >
+          //           {this.props.t(this.props, "review_title")}
+          //         </div>
+          //       </div>
+          //       <div className="col-lg-12 offset-lg-0 textCenter row">
+          //         {(
+          //           Array.from(
+          //             this.props.t(this.props, "reviews", {
+          //               returnObjects: true
+          //             })
+          //           ) || []
+          //         ).map(review => {
+          //           return (
+          //             <div className="col-lg-4 review_parent">
+          //               <div className="review">
+          //                 <div
+          //                   className="review-head"
+          //                   style={{
+          //                     backgroundImage: "url('" + review.head + "')"
+          //                   }}
+          //                 ></div>
+          //                 <div className="customer-title">
+          //                   <div className="review-title">
+          //                     {review.name}
+          //                     <br />
+          //                     <span className="company">{review.company}</span>
+          //                   </div>
+          //                 </div>
+          //                 <div
+          //                   className="review-text"
+          //                   style={{ marginBottom: "8px" }}
+          //                 >
+          //                   {review.message}
+          //                 </div>
+          //                 {this.renderNote(review)}
+          //               </div>
+          //             </div>
+          //           );
+          //         })}
+          //       </div>
+          //     </div>
+          //   </div>
+          // </section>
+				}
           <section>
             <div className="container">
               <div className="row">
