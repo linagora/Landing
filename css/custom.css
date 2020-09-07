@@ -236,6 +236,12 @@ section.sectionWithScreen {
   display: inline-block;
   font-family: inherit;
 }
+#landing .customers .styles_root__5JE_m{
+	margin:0px;
+	margin-right : 24px;
+  display: inline-block;
+  font-family: inherit;
+}
 .customers {
   margin-top: 40px;
 }
