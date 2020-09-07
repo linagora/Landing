@@ -137,33 +137,9 @@ class Home extends React.Component {
                   </div>
                 </div>
                 <div className="col-lg-6 d-visible d-lg-none">
-                  <div className="customers">
-                    <div className="" style={{ textAlign: "center" }}>
-                      <img
-                        className="customer"
-                        src="/medias/customers/CVA.png"
-                        alt=""
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="CVA"
-                      />
-											<img
-                        className="customer"
-                        src="/medias/customers/univ-lorraine.png"
-                        alt=""
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="UL"
-                      />
-                      <img
-                        className="customer"
-                        src="/medias/customers/ingen.png"
-                        alt="INGEN"
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="INGEN"
-                      />
-                    </div>
+                  <div className="customers center">
+										<Star style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
+										<Fork style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
                   </div>
                 </div>
               </div>
