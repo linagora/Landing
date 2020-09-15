@@ -109,7 +109,7 @@ const Pricing = props => {
                           style={{ fontSize: "40px" }}
                           id="premiumAmountNumber"
                         >
-                          {annualMode ? "9" : "12.5"}€
+                          {annualMode ? "6" : "7.20"}€
                         </span>
                         <span className="small">
                           {props.t(props, "byUserByMonth")}

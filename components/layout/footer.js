@@ -166,12 +166,14 @@ const Footer = ({ t, getLang }) => {
                 >
                   {t({ router: router }, "legals_tos")}
                 </a>
-                <a
-                  className="linkFooter"
-                  href={"/" + getLang({ router: router }) + "/" + "legals/security"}
-                >
-                  {t({ router: router }, "legals_security")}
-                </a>
+								{
+	                /*<a
+	                  className="linkFooter"
+	                  href={"/" + getLang({ router: router }) + "/" + "legals/security"}
+	                >
+	                  {t({ router: router }, "legals_security")}
+	                </a>*/
+								}
               </div>
               <div className="col-lg-3">
                 <div className="footerTitle">
