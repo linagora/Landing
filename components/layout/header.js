@@ -47,6 +47,9 @@ const Header = ({ t, scrolled, getLang }) => {
             </NavDropdown>
           </Nav>
           <Nav.Item className="nav-item">
+						<a href="https://www.producthunt.com/posts/twake?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-twake" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=261899&theme=light" alt="Twake - Best open source collaboration platform for team | Product Hunt Embed" style={{width: "250px", height:"54px"}} width="250" height="54" /></a>
+          </Nav.Item>
+          <Nav.Item className="nav-item">
             <Nav.Link className="nav-link" href="https://app.twakeapp.com">
               {t({ router: router }, "connection")}
             </Nav.Link>
