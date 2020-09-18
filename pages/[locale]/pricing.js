@@ -2,7 +2,7 @@ import { withTranslation } from "../../i18n";
 import Layout from "../../components/layout/layout";
 import { useState } from "react";
 
-const Pricing = props => {
+const Pricing = (props) => {
   let [open1, setOpen1] = useState(false);
   let [open2, setOpen2] = useState(false);
   let [open3, setOpen3] = useState(false);
@@ -83,7 +83,7 @@ const Pricing = props => {
                         <div className="feature">
                           <img src="/medias/check-alt-green.png" alt="" />
                           <div className="nameFeature">
-                            1 {props.t(props, "gostorage")}
+                            1 {props.t(props, "gbstorage")}
                           </div>
                         </div>
                         <div className="feature">
@@ -188,7 +188,7 @@ const Pricing = props => {
                           marginTop: "4px",
                           float: "right",
                           height: "16px",
-                          width: "16px"
+                          width: "16px",
                         }}
                       >
                         <div className="vertB vertB1"></div>
@@ -215,7 +215,7 @@ const Pricing = props => {
                           marginTop: "4px",
                           float: "right",
                           height: "16px",
-                          width: "16px"
+                          width: "16px",
                         }}
                       >
                         <div className="vertB vertB1"></div>
@@ -242,7 +242,7 @@ const Pricing = props => {
                           marginTop: "4px",
                           float: "right",
                           height: "16px",
-                          width: "16px"
+                          width: "16px",
                         }}
                       >
                         <div className="vertB vertB1"></div>
@@ -271,7 +271,7 @@ const Pricing = props => {
                           marginTop: "4px",
                           float: "right",
                           height: "16px",
-                          width: "16px"
+                          width: "16px",
                         }}
                       >
                         <div className="vertB vertB1"></div>
@@ -299,7 +299,7 @@ const Pricing = props => {
                           marginTop: "4px",
                           float: "right",
                           height: "16px",
-                          width: "16px"
+                          width: "16px",
                         }}
                       >
                         <div className="vertB vertB1"></div>
@@ -335,7 +335,7 @@ const Pricing = props => {
 
 Pricing.getInitialProps = async () => ({
   namespacesRequired: ["pricing"],
-  locale: "en"
+  locale: "en",
 });
 
 export default withTranslation(["pricing"])(Pricing);
