@@ -1,5 +1,6 @@
 :root {
   --primary: #837dff;
+  --primary-hover: #5D58D7;
   --secondary: #182952;
   --primary_background: #f3f2ff;
   --green: #3dcc97;
@@ -14,6 +15,7 @@
   --black-15: rgba(0, 0, 0, 0.15);
   --white-50: rgba(255, 255, 255, 0.5);
   --light-mint: #b3f9cb;
+	--dark-grey : #7E869B;
   --bluey-green: #2caf8b;
   --blue-green: #13766f;
   --dark-aqua: #0b5f61;
@@ -41,6 +43,7 @@ body {
   padding-top: 110px;
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 a {
   color: var(--primary);
@@ -48,6 +51,38 @@ a {
 a:hover {
   text-decoration: underline var(--primary);
   color: unset;
+}
+.input{
+	border-radius: 3px;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: 500;
+	padding:0px 16px;
+	background : var(--pale-grey);
+	border:none;
+	outline: none;
+	width: 100%;
+	color:var(--black);
+}
+.input:hover,.input:focus{
+	background : var(--grey_light);
+}
+.input::placeholder {
+	color: var(--dark-grey);
+
+}
+.submit{
+	line-height: 40px;
+	padding:0px 16px;
+	color: var(--white);
+	background: var(--primary);
+	border-radius: 3px;
+	border:none;
+	width: 100%;
+	font-weight: 500;
+}
+.submit:hover{
+	background: var(--primary-hover);
 }
 .container-fluid {
   padding: 0;

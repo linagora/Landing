@@ -4,10 +4,34 @@ import Layout from "../../components/layout/layout";
 
 const Webinar = props => {
 	const [name,setName] = useState("");
-	const [firsname,setFistName] = useState("");
+	const [firstname,setFirstName] = useState("");
 	const [email,setEmail] = useState("");
 	const [company,setCompany] = useState("");
 	const [newsletter,setNewsletter] = useState(false);
+
+	function sendForm(e){
+		e.preventDefault();
+		e.stopPropagation();
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", 'https://hook.integromat.com/zjjfzqv8fekpmj2w974tfl95nhhoq9tq', true);
+		xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
+
+		//Envoie les informations du header adaptées avec la requête
+		xhr.setRequestHeader("Content-Type", "application/json");
+
+		xhr.onreadystatechange = function() { //Appelle une fonction au changement d'état.
+		    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+					window.location.replace("/fr/webinarsubscribed");
+		    }
+		}
+		xhr.send(JSON.stringify({
+			name: name,
+			firstname: firstname,
+			email: email,
+			company: company
+		}));
+
+}
 
   return (
     <Layout page={"Webinar"}>
@@ -22,6 +46,7 @@ const Webinar = props => {
               <div className="col-lg-12">
                   <h2 className="subline">WEBINAR</h2>
                 	<h1 className="title">Une nouvelle façon de collaborer</h1>
+									<h2 className="subtitle textCenter">5 novembre 2020 à 10h30</h2>
               </div>
               <div className="col-lg-6 offset-lg-3 textCenter">
 								<div className="subtitle" style={{textAlign:"justify",marginTop:"24px"}}>
@@ -44,58 +69,7 @@ const Webinar = props => {
 						</div>
 					</div>
 				</section>
-				<section className="sectionWithLiteBackground">
-					<div className="container">
-						<div className="row">
-							<div className="col-lg-6 offset-lg-3">
-								<div className="title" style={{textAlign:"center"}}>Intervenants</div>
-								<div className="" style={{display:"flex",marginTop:"48px"}}>
-								<div className="" style={{flex:0.5}}>
-									<div className="" style={{display:""}}>
-										<img style={{boxShadow:"0px 0px 16px 0px rgba(0,0,0,0.16)",borderRadius:"50%",width:"100px",heigth:"100px",display:"block",margin:"auto"}} src="https://pbs.twimg.com/profile_images/1285934551827718145/UQ0OkMVB_400x400.jpg"/>
-										<div className="subtitle" style={{textAlign:"center",marginTop:"24px",marginBottom:"8px"}}>Benoît Tallandier</div>
-										<div className="" style={{textAlign:"center"}}>Chef produit de Twake</div>
-										<div className="" style={{marginTop:"16px",textAlign:"center"}}><a href="https://www.linkedin.com/in/btallandier/"><img style={{width:"24px"}} src="/medias/linkedin.svg"/></a></div>
-									</div>
-								</div>
-								<div className="" style={{flex:0.5}}>
-									<div className="" style={{display:""}}>
-										<img style={{boxShadow:"0px 0px 16px 0px rgba(0,0,0,0.16)",borderRadius:"50%",width:"100px",heigth:"100px",display:"block",margin:"auto"}} src="https://pbs.twimg.com/profile_images/1285934551827718145/UQ0OkMVB_400x400.jpg"/>
-										<div className="subtitle" style={{textAlign:"center",marginTop:"24px",marginBottom:"8px"}}>Benoît Tallandier</div>
-										<div className="" style={{textAlign:"center"}}>Chef produit de Twake</div>
-										<div className="" style={{marginTop:"16px",textAlign:"center"}}><a href="https://www.linkedin.com/in/btallandier/"><img style={{width:"24px"}} src="/medias/linkedin.svg"/></a></div>
-									</div>
-								</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-        <section>
-          <div className="container">
-						<div className="row">
-							<div className="col-lg-6 offset-lg-3">
-								<div className="title" style={{textAlign:"center"}}>Le menu</div>
-								<div className="" style={{marginBottom:"32px",marginTop:"48px"}}>
-									<div className="subtitle" style={{marginBottom:"12px"}}>
-										<div style={{display:"inline-block",width:"6px",height:"6px",background:"var(--secondary)",borderRadius:"10px",verticalAlign:"middle",marginRight:"8px"}}></div>
-										L'évolution de la collaboration en entreprise
-									</div>
-									<div className="">De plus en plus, le travail se fait à distance. Comment apréhender cette nouvelle façon de travailler en équipe</div>
-								</div>
-								<div className="" style={{marginBottom:"32px"}}>
-									<div className="subtitle" style={{marginBottom:"12px"}}><div style={{display:"inline-block",width:"6px",height:"6px",background:"var(--secondary)",borderRadius:"10px",verticalAlign:"middle",marginRight:"8px"}}></div>Mettre en place une plateforme collaborative</div>
-									<div className="">Comment plannifier et emmener ses collaborateurs vers une nouvelle solution.</div>
-								</div>
-								<div className="" style={{marginBottom:"32px"}}>
-									<div className="subtitle" style={{marginBottom:"12px"}}><div style={{display:"inline-block",width:"6px",height:"6px",background:"var(--secondary)",borderRadius:"10px",verticalAlign:"middle",marginRight:"8px"}}></div>Découvrir Twake</div>
-									<div className="">Quels sont les grandes fonctionnalités de Twake. Comment Twake aide à travailler au quotidien en équipe</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section>
+{				/*<section>
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-6 offset-lg-3">
@@ -114,28 +88,40 @@ const Webinar = props => {
 							</div>
 						</div>
 					</div>
-				</section>
+				</section>*/}
 				<section>
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-12">
-								<div className="title" style={{textAlign:"center"}}>S'inscrire au webinar</div>
-							</div>
+							<div className="col-md-12 textCenter title" style={{marginBottom:"96px"}}>S'inscrire au webinar</div>
 						</div>
             <div className="row">
-              <div className="col-lg-6 offset-lg-3" style={{height:"800px"}}>
-								{/*<form action="https://dislack.com/send/5cbf2421f44fc51b27d70b45" method="post">
-								  <input type="text" name="lastName" placeholder="Nom" required />
-								  <input type="text" name="firstName" placeholder="Prénom" required />
-								  <input type="email" name="email" placeholder="Email" required />
-								  <input type="text" name="companyName" placeholder="Nom de l'entreprise" required />
-								  <button>Submit</button>
-								</form>*/}
-								<iframe style={{border: 0, width:"90%", height: "100%", position: "absolute"}} src="https://dislack.com/f/5cbf2421f44fc51b27d70b45/?type=embed&padding=&background=true&branding=true"></iframe>
+              <div className="col-lg-4 offset-lg-1" style={{height:"800px"}}>
+								<form onSubmit={(e)=>sendForm(e)}>
+									<div className="row">
+										<div className="col-md-6">
+											<input className="input" type="text" name="lastName" placeholder="Nom" onChange={(e)=>setName(e.target.value)} required />
+										</div>
+										<div className="col-md-6">
+											<input className="input" type="text" name="firstName" placeholder="Prénom" onChange={(e)=>setFirstName(e.target.value)} required />
+										</div>
+									</div>
+									<div className="row" style={{marginTop:"24px"}}>
+										<div className="col-md-12">
+											<input className="input" type="email" name="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} required />
+										</div>
+									</div>
+									<div className="row" style={{marginTop:"24px"}}>
+										<div className="col-md-12">
+									  	<input className="input" type="text" name="companyName" placeholder="Nom de l'organisation" onChange={(e)=>setCompany(e.target.value)} required />
+										</div>
+									</div>
+								  <button class="submit" style={{marginTop:"24px"}}>Submit</button>
+								</form>
+								{/*<iframe style={{border: 0, width:"90%", height: "100%", position: "absolute"}} src="https://dislack.com/f/5cbf2421f44fc51b27d70b45/?type=embed&padding=&background=true&branding=true"></iframe>*/}
               </div>
-              {/*<div className="col-lg-6">
+              <div className="col-lg-6 offset-lg-1">
                 <img src="/medias/twakeDevice.png" style={{width:"100%",marginTop:"0"}}/>
-              </div>*/}
+              </div>
             </div>
           </div>
         </section>
