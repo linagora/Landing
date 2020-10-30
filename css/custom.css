@@ -704,31 +704,63 @@ h2 {
 }
 .buttonPricing {
   font-size: 12px;
-  font-weight: bold;
   line-height: 1.33;
   text-align: center;
-  color: var(--primary);
+  color: var(--black);
+	border:solid 1px var(--primary);
   display: inline-block;
   padding: 8px 12px;
+	width:250px;
 }
 .buttonPricing:hover {
   cursor: pointer;
   background-color: var(--primary);
   color: var(--white);
-  border-radius: 16px;
+  border-radius: 3px;
 }
 .buttonPricing.selected {
-  border-radius: 16px;
   background-color: var(--primary);
   color: var(--white);
 }
+.pricingTable td{
+	padding : 8px 16px;
+	text-align: center;
+	border:solid 1px var(--grey_light);
+}
+.pricingTable th{
+	width:180px;
+	text-align: center;
+	padding:24px 0px;
+	border:solid 1px var(--grey_light);
+}
+.pricingTable tr .featureName{
+	width:250px;
+	text-align: left;
+}
+.tsection{
+	text-transform: uppercase;
+  font-weight: 700;
+  background: var(--primary_background);
+  color: var(--primary);
+  font-size: 13px;
+	text-align: left !important;
+}
+
 .buttonPricingBloc {
+	margin : 48px 0px;
   text-align: center;
+}
+.buttonPricingBloc .pricingTitle{
+	font-size:18px;
+	font-weight: 600;
+}
+.buttonPricingBloc .pricingSubTitle{
+  font-weight: 500;
 }
 .pricingBlocks {
   text-align: center;
   transform: translateY(50%);
-  margin-top: -200px;
+  margin-top: -100px;
 }
 .pricingBlocksIn {
   display: inline-flex;
@@ -775,6 +807,9 @@ h2 {
   color: var(--secondary);
   margin-bottom: 20px;
 }
+.subTitlePlan{
+	text-align: justify;
+}
 .titlePlan .big {
   font-size: 24px;
   font-weight: bold;
@@ -783,6 +818,13 @@ h2 {
   font-size: 12px;
   font-weight: 500;
   margin-left: 8px;
+}
+.pricingAmount{
+	width: 100%;
+	text-align: center;
+	margin:48px 0px;
+	font-size: 32px;
+	font-weight: 500;
 }
 .features {
   margin-bottom: 24px;
