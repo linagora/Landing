@@ -9,158 +9,389 @@ const Pricing = props => {
   let [open4, setOpen4] = useState(false);
   let [open5, setOpen5] = useState(false);
 
-	let features = [
-		{
-			title : "features",
-			features : [
-				{
-					name : "chat",
-					available : [true,true,true],
-				},
-				{
-					name : "drive",
-					options : ["1TB","5TB",props.t(props,"unlimited")]
-				},
-				{
-					name : "calendar",
-					available : [true,true,true],
-				},
-				{
-					name : "task",
-					available : [true,true,true],
-				},
-				{
-					name : "video",
-					available : [true,true,true],
-				},
-				{
-					name : "office",
-					available : [true,true,true],
-				},
-				{
-					name : "guest",
-					available : [false,true,true],
-				},
-				{
-					name : "email",
-					options : ["",props.t(props,"comingsoon"),props.t(props,"comingsoon")],
-				},
-				{
-					name : "teamSpace",
-					options : ["",props.t(props,"comingsoon"),props.t(props,"comingsoon")],
-				}
-			],
-		},
-		{
-			title : "privacy",
-			features : [
-				{
-					name : "strongpasswordpolicy",
-					available : [true,true,true],
-				},
-				{
-					name : "2fa",
-					available : [true,true,true],
-				},
-				{
-					name : "ssoauthentification",
-					available : [true,true,true],
-				},
-				{
-					name : "dataeurope",
-					available : [true,true,true],
-				},
-				{
-					name : "cloudact",
-					available : [true,true,true],
-				},
-				{
-					name : "gdpr",
-					available : [true,true,true],
-				},
-				{
-					name : "tsl",
-					available : [true,true,true],
-				},
-				{
-					name : "encryption",
-					available : [false,true,true],
-				},
-				{
-					name : "fileEncryption",
-					available : [false,true,true],
+	let plans = {
+		saas : [
+			"standard",
+			"premium",
+			"entreprise"
+		],
+		selhosted :[
+			"community",
+			"standard",
+			"premium",
+			"entreprise"
+		]
+	}
 
-				},
-				{
-					name : "advancedSecurity",
-					available : [false,true,true],
-				},
-				{
-					name : "deviceManagement",
-					available : [false,true,true],
-				}
-			]
-		},
-		{
-			title : "support",
-			features : [
-				{
-					name : "chat",
-					available : [true,true,true],
-				},
-				{
-					name : "email",
-					available : [true,true,true],
-				},
-				{
-					name : "phone",
-					available : [true,true,true],
-				},
-				{
-					name : "inPerson",
-					available : [false,true,true],
-				},
-				{
-					name : "99uptime",
-					available : [false,true,true],
-				},
-				{
-					name : "accountTeam",
-					available : [false,false,true],
-				}
-			]
-		},
-		{
-			title : "access",
-			features : [
-				{
-					name : "web",
-					available : [true,true,true],
-				},
-				{
-					name : "mobile",
-					available : [true,true,true],
-				},
-				{
-					name : "desktop",
-					available : [true,true,true],
-				}
-			]
-		},
-		{
-			title : "integration",
-			features : [
-				{
-					name : "jitsi",
-					available : [true,true,true],
-				},
-				{
-					name : "onlyoffice",
-					available : [true,true,true],
-				}
-			]
-		}
-	]
+	let features = {
+		saas : [
+			{
+				title : "features",
+				features : [
+					{
+						name : "chat",
+						available : [true,true,true],
+					},
+					{
+						name : "drive",
+						available : ["1TB","5TB",props.t(props,"unlimited")]
+					},
+					{
+						name : "calendar",
+						available : [true,true,true],
+					},
+					{
+						name : "task",
+						available : [true,true,true],
+					},
+					{
+						name : "video",
+						available : [true,true,true],
+					},
+					{
+						name : "office",
+						available : [true,true,true],
+					},
+					{
+						name : "guest",
+						available : [false,true,true],
+					},
+					{
+						name : "email",
+						available : ["",props.t(props,"comingsoon"),props.t(props,"comingsoon")],
+					},
+					{
+						name : "teamSpace",
+						available : ["",props.t(props,"comingsoon"),props.t(props,"comingsoon")],
+					}
+				],
+			},
+			{
+				title : "privacy",
+				features : [
+					{
+						name : "strongpasswordpolicy",
+						available : [true,true,true],
+					},
+					{
+						name : "2fa",
+						available : [true,true,true],
+					},
+					{
+						name : "ssoauthentification",
+						available : [true,true,true],
+					},
+					{
+						name : "dataeurope",
+						available : [true,true,true],
+					},
+					{
+						name : "cloudact",
+						available : [true,true,true],
+					},
+					{
+						name : "gdpr",
+						available : [true,true,true],
+					},
+					{
+						name : "tsl",
+						available : [true,true,true],
+					},
+					{
+						name : "encryption",
+						available : [false,true,true],
+					},
+					{
+						name : "fileEncryption",
+						available : [false,true,true],
+
+					},
+					{
+						name : "advancedSecurity",
+						available : [false,true,true],
+					},
+					{
+						name : "deviceManagement",
+						available : [false,true,true],
+					}
+				]
+			},
+			{
+				title : "support",
+				features : [
+					{
+						name : "chat",
+						available : [true,true,true],
+					},
+					{
+						name : "email",
+						available : [true,true,true],
+					},
+					{
+						name : "phone",
+						available : [true,true,true],
+					},
+					{
+						name : "inPerson",
+						available : [false,true,true],
+					},
+					{
+						name : "99uptime",
+						available : [false,true,true],
+					},
+					{
+						name : "accountTeam",
+						available : [false,false,true],
+					}
+				]
+			},
+			{
+				title : "access",
+				features : [
+					{
+						name : "web",
+						available : [true,true,true],
+					},
+					{
+						name : "mobile",
+						available : [true,true,true],
+					},
+					{
+						name : "desktop",
+						available : [true,true,true],
+					}
+				]
+			},
+			{
+				title : "integration",
+				features : [
+					{
+						name : "jitsi",
+						available : [true,true,true],
+					},
+					{
+						name : "onlyoffice",
+						available : [true,true,true],
+					}
+				]
+			}
+		],
+		selhosted : [
+			{
+				title : "features",
+				features : [
+					{
+						name : "chat",
+						available : [true,true,true,true],
+					},
+					{
+						name : "drive",
+						available : [true,true,true,true],
+					},
+					{
+						name : "calendar",
+						available : [true,true,true,true],
+					},
+					{
+						name : "task",
+						available : [true,true,true,true],
+					},
+					{
+						name : "guest",
+						available : [true,true,true,true],
+					},
+					{
+						name : "video",
+						available : [false,true,true,true],
+					},
+					{
+						name : "office",
+						available : [true,true,true,true],
+					},
+					{
+						name : "email",
+						available : [false,false,true,true],
+					},
+					{
+						name : "fileSharing",
+						available : [false,false,true,true],
+					},
+					{
+						name : "teamSpace",
+						available : [false,false,true,true],
+					}
+				],
+			},
+			{
+				title : "privacy",
+				features : [
+					{
+						name : "strongpasswordpolicy",
+						available : [false,true,true,true],
+					},
+					{
+						name : "2fa",
+						available : [false,true,true,true],
+					},
+					{
+						name : "ssoauthentification",
+						available : [false,true,true,true],
+					},
+					{
+						name : "activedirectory",
+						available : [false,false,true,true],
+					},
+					{
+						name : "dataeurope",
+						available : [true,true,true,true],
+					},
+					{
+						name : "cloudact",
+						available : [true,true,true,true],
+					},
+					{
+						name : "gdpr",
+						available : [true,true,true,true],
+					},
+					{
+						name : "tsl",
+						available : [true,true,true,true],
+					},
+					{
+						name : "encryption",
+						available : [false,false,true,true],
+					},
+					{
+						name : "fileEncryption",
+						available : [false,false,true,true],
+
+					},
+					{
+						name : "advancedSecurity",
+						available : [false,false,true,true],
+					},
+					{
+						name : "deviceManagement",
+						available : [false,false,true,true],
+					}
+				]
+			},
+			{
+				title : "resources",
+				features : [
+					{
+						name : "documentation",
+						available : [true,true,true,true],
+					},
+					{
+						name : "tutovideo",
+						available : [true,true,true,true],
+					},
+					{
+						name : "forum",
+						available : [true,true,true,true],
+					},
+					{
+						name : "featuresbugs",
+						available : [true,true,true,true],
+					},
+				]
+			},
+			{
+				title : "support",
+				features : [
+					{
+						name : "ticket",
+						available : [false,true,true,true],
+					},
+					{
+						name : "chat",
+						available : [false,true,true,true],
+					},
+					{
+						name : "email",
+						available : [false,true,true,true],
+					},
+					{
+						name : "phone",
+						available : [false,false,true,true],
+					},
+					{
+						name : "inPerson",
+						available : ["","",props.t(props,"ondemand"),props.t(props,"ondemand")]
+					},
+					{
+						name : "99uptime",
+						available : [false,false,false,true],
+					},
+					{
+						name : "accountTeam",
+						available : [false,false,false,true],
+					}
+				]
+			},
+			{
+				title : "onboarding",
+				features : [
+					{
+						name : "obcall",
+						available : [false,true,true,true],
+					},
+					{
+						name : "migration",
+						available : [false,true,props.t(props,"ondemand"),true],
+					},
+					{
+						name : "upgrade",
+						available : [false,true,props.t(props,"ondemand"),true],
+					}
+				]
+			},
+			{
+				title : "deployment",
+				features : [
+					{
+						name : "onprem",
+						available : [true,true,true,true],
+					},
+					{
+						name : "privatehosted",
+						available : [false,true,true,true],
+					}
+				]
+			},
+			{
+				title : "access",
+				features : [
+					{
+						name : "web",
+						available : [true,true,true,true],
+					},
+					{
+						name : "mobile",
+						available : [true,true,true,true],
+					},
+					{
+						name : "desktop",
+						available : [true,true,true,true],
+					}
+				]
+			},
+			{
+				title : "integration",
+				features : [
+					{
+						name : "jitsi",
+						available : [false,true,true,true],
+					},
+					{
+						name : "onlyoffice",
+						available : [false,true,true,true],
+					}
+				]
+			}
+		]
+	}
 
   let [saasMode, setSaasMode] = useState(true);
 
@@ -277,17 +508,17 @@ const Pricing = props => {
 									<thead>
 										<tr>
 											<th style={{border:"none"}}></th>
-											<th>Standard</th>
-											<th>Premium</th>
-											<th>Entreprise</th>
+											{plans[saasMode?"saas":"selhosted"].map(plan =>(
+												<th>{props.t(props,plan)}</th>
+											))}
 										</tr>
 									</thead>
 									<tbody>
 										{
-											features.map(section => {
+											features[saasMode?"saas":"selhosted"].map(section => {
 												let ret = [
 													<tr>
-														<td colSpan="4" className="tsection">{props.t(props,section.title)}</td>
+														<td colSpan="20" className="tsection">{props.t(props,section.title)}</td>
 													</tr>
 												];
 												section.features.forEach(feat => {
@@ -295,20 +526,18 @@ const Pricing = props => {
 														<tr className="tfeature">
 															<td className="featureName">{props.t(props,feat.name)}</td>
 															{
-																feat.available &&
-																[
-																	<td>{feat.available[0]?<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />:""}</td>,
-																	<td>{feat.available[1]?<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />:""}</td>,
-																	<td>{feat.available[2]?<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />:""}</td>
-																]
-															}
-															{
-																feat.options &&
-																[
-																	<td>{feat.options[0]}</td>,
-																	<td>{feat.options[1]}</td>,
-																	<td>{feat.options[2]}</td>,
-																]
+																feat.available.map(available =>(
+																	<td>{
+																		(available.length && available.length)>0?
+																			available
+																		:
+																			available==true
+																			?
+																				<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />
+																			:
+																				""
+																	}</td>
+																))
 															}
 														</tr>
 													)

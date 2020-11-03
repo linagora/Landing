@@ -1,6 +1,6 @@
 {
   "pricingTitle" : "PRICING",
-   "titleSub" : "An offer for each project",
+   "titleSub" : "Select the right plan for your organization​",
    "monthly" : "Monthly",
    "anual" : "Annual",
    "standard" : "Standard",
@@ -40,19 +40,31 @@
 	 "saasSubTitle" : "Cloud offering hosted by Twake",
 	 "compare" : "Compare our plans",
 
+
+
+	 "community":"Community",
+	 "standard" : "Standard",
+	 "premium" : "Premium",
+	 "entreprise" : "Entreprise",
+
+
 	 "features" : "Features",
 	 "privacy" : "Privacy",
 	 "access" : "Access",
 	 "integration" : "Integration",
+	 "resources" : "Resources",
+	 "onboarding" : "onboarding",
+	 "deployment" : "Deployment",
 
 	 "chat" : "Chat",
 	 "drive" : "Drive",
 	 "calendar" : "Calendar",
 	 "task" : "Task",
-	 "video" : "Meetings (Video)",
+	 "video" : "Meetings",
 	 "office" : "Office",
 	 "guest" : "Guest Users",
 	 "email" : "Email",
+	 "fileSharing" : "File Sharing",
 	 "teamSpace" : "Team Spaces",
 
 	 "strongpasswordpolicy" : "Strong password policy",
@@ -69,7 +81,8 @@
 	 "deviceManagement" : "Device Management",
 
 	 "support" : "Support",
-	 "phone":"Phone",
+	 "ticket" : "Online ticket Creation",
+	 "phone" : "Phone",
 	 "inPerson" : "In-Person",
 	 "99uptime" : "99.9 % uptime",
 	 "accountTeam" : "Designated account team",
@@ -82,6 +95,18 @@
 	 "onlyoffice" : "Only Office",
 
 	 "comingsoon" : "Coming Soon",
-	 "unlimited" : "Unlimited"
+	 "ondemand" : "On demand",
+	 "unlimited" : "Unlimited",
 
+	 "documentation" : "Documentation & Tutorials",
+	 "tutovideo" : "Tutorial Videos",
+	 "forum" : "Forums",
+	 "featuresbugs" : "Features or Bugs",
+
+	 "obcall" : "Onboarding Call",
+	 "migration" : "Migration Assistance",
+	 "upgrade" : "On-Call Upgrade Assistance",
+
+	 "onprem" : "On-premises",
+	 "privatehosted" : "Private Hosted"
  }

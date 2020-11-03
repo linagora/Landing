@@ -774,12 +774,12 @@ h2 {
   display: inline-flex;
   align-items: flex-start;
   flex-direction: column;
-  width: 340px;
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(183, 183, 183, 0.15);
   background-color: var(--white);
   padding: 24px;
   margin: 20px;
+	flex: 1;
 }
 .planName {
   display: inline-block;
