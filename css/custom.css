@@ -202,6 +202,7 @@ nav {
   opacity: 1;
   transition: opacity 0.5s;
 }
+
 #landing .row {
 }
 section {
@@ -2481,4 +2482,20 @@ a.demoTitle:hover {
 .bs-popover-auto[x-placement^="top"] > .arrow::before,
 .bs-popover-top > .arrow::before {
   display: none;
+}
+
+
+
+/* staysafe */
+.staySafe .sectionWithScreen{
+	background: white;
+	margin: 100px 0px;
+}
+.staySafe .imgScreen{
+	opacity: 1;
+	max-width: 512px;
+	box-shadow: none!important;
+}
+.staySafe .colTitle{
+	max-width: 475px !important;
 }
