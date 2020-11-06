@@ -430,72 +430,156 @@ const Pricing = props => {
               </div>
               <div className="col-lg-12" style={{ paddingTop: "1px" }}>
                 <div className="pricingBlocks">
-                  <div className="pricingBlocksIn">
-                    <div className="pricingBlock">
-                      <div className="titlePlan">
-                        <span
-                          className="big amount"
-                          style={{ fontSize: "40px" }}
-                        >
-													{props.t(props, "standard")}
-                        </span>
-                      </div>
-											<div className="subTitlePlan">{props.t(props,"standardSubTitle")}</div>
-											<div className="pricingAmount">5 € <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"byUserByMonth")}</span></div>
-                      <a
-                        href="https://app.twakeapp.com"
-                        className="btn btn-purple"
-                        style={{ width: "100%", padding: "6px 16px" }}
-                      >
-                        {props.t(props, "freeTry")}
-                      </a>
-                    </div>
-                    <div className="pricingBlock">
-                      <div className="titlePlan">
-                        <span
-                          className="big amount"
-                          style={{ fontSize: "40px" }}
-                        >
-												{props.t(props, "premium")}
-                        </span>
-                      </div>
-											<div className="subTitlePlan">{props.t(props,"premiumSubTitle")}</div>
-											<div className="pricingAmount">7 € <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"byUserByMonth")}</span></div>
 
-                      <a
-                        href="https://app.twakeapp.com"
-                        className="btn btn-purple"
-                        style={{ width: "100%", padding: "6px 16px" }}
-                      >
-                        {props.t(props, "freeTry")}
-                      </a>
-                    </div>
-                    <div className="pricingBlock">
-                      <div className="titlePlan">
-                        <span
-                          className="big amount"
-                          style={{ fontSize: "40px" }}
-                        >
-												{props.t(props, "entreprise")}
-                        </span>
-                      </div>
-											<div className="subTitlePlan">{props.t(props,"entrepriseSubTitle")}</div>
-											<div className="pricingAmount">{props.t(props,"")} <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"contactSale")}</span></div>
-                      <a
-                        href="https://app.twakeapp.com"
-                        className="btn btn-purple"
-                        style={{ width: "100%", padding: "6px 16px" }}
-                      >
-                        {props.t(props, "contactSale")}
-                      </a>
-                    </div>
-                  </div>
+									{!saasMode &&
+                  <div className="pricingBlocksIn">
+										<div className="pricingBlock col-lg-3 col-md-3 col-sm-3">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+														style={{ fontSize: "24px" }}
+													>
+														{props.t(props, "community")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props, "selfhostedCommunautySubTitle")}</div>
+												<div className="pricingAmount"><span style={{ fontWeight: "400", fontSize: "16px" }}>{props.t(props, "free")}</span></div>
+												<a
+													href="https://app.twakeapp.com"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+										<div className="pricingBlock col-lg-3 col-md-3 col-sm-3">
+                      	<div className="titlePlan">
+													<span
+														className="big amount"
+														style={{ fontSize: "24px" }}
+													>
+														{props.t(props, "standard")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"selfhostedStandardSubTitle")}</div>
+											<div className="pricingAmount" style={{ marginTop: "72px" }}>35 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
+												<a
+													href="https://app.twakeapp.com"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+										<div className="pricingBlock col-lg-3 col-md-3 col-sm-3">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+														style={{ fontSize: "24px" }}
+													>
+													{props.t(props, "premium")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"selfhostedPremiumSubTitle")}</div>
+												<div className="pricingAmount" style={{marginTop:"72px"}}>70 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
+												<a
+													href="https://app.twakeapp.com"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+											<div className="pricingBlock col-lg-3 col-md-3 col-sm-3">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+														style={{ fontSize: "24px" }}
+													>
+													{props.t(props, "entreprise")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"selfhostedEntrepriseSubTitle")}</div>
+												<div className="pricingAmount">{props.t(props,"")} <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"contactSale")}</span></div>
+												<a
+													href="https://app.twakeapp.com"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+												>
+													{props.t(props, "contactSale")}
+												</a>
+											</div>
+											</div>
+										}
+										{saasMode &&
+
+										<div className="pricingBlocksIn">
+											<div className="pricingBlock">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+														style={{ fontSize: "40px" }}
+													>
+														{props.t(props, "standard")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"saasStandardSubTitle")}</div>
+												<div className="pricingAmount">5 € <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"byUserByMonth")}</span></div>
+												<a
+													href="https://app.twakeapp.com"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+											<div className="pricingBlock">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+														style={{ fontSize: "40px" }}
+													>
+													{props.t(props, "premium")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"saasPremiumSubTitle")}</div>
+											<div className="pricingAmount" style={{ marginTop: "72px" }}>7 € <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"byUserByMonth")}</span></div>
+
+												<a
+													href="https://app.twakeapp.com"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+											<div className="pricingBlock">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+														style={{ fontSize: "40px" }}
+													>
+													{props.t(props, "entreprise")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"saasEntrepriseSubTitle")}</div>
+											<div className="pricingAmount" style={{ marginTop: "72px" }}>{props.t(props,"")} <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"contactSale")}</span></div>
+												<a
+													href="https://app.twakeapp.com"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+												>
+													{props.t(props, "contactSale")}
+												</a>
+											</div>
+										</div>
+										}
                 </div>
               </div>
             </div>
           </div>
         </section>
-				<section>
+				<section className="pricing-compare">
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-12 faqcol">

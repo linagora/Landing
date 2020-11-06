@@ -30,5 +30,22 @@
   "onpremise" : "Puis-je installer Twake sur mes serveurs ?",
   "onpremiseR" : "Nous possédons une offre on-premise, pour en savoir plus, contactez-nous sur l'adresse contact@twakeapp.com ou demandez une démo via le siteweb.",
   "tryEasy" : "Essayez Twake maintenant, c'est facile !",
-  "tryNow" : "Essayer maintenant"
+  "tryNow" : "Essayer maintenant",
+
+  "onPremTitle": "Self-hosted",
+  "onPremSubTitle": "Host your own instance on-premises",
+  "saasTitle": "SaaS",
+  "saasSubTitle": "Cloud offering hosted by Twake",
+
+  "selfhostedCommunautySubTitle": "Pour les équipes qui sont prêt à controler et centraliser leurs communications.",
+  "standard": "Standard",
+  "saasStandardSubTitle": "Pour les équipes qui sont prêt à controler et centraliser leurs communications.",
+  "selfhostedStandardSubTitle": "Pour les entreprises prêtes à intensifier leur communication d'équipe.",
+  "premium": "Premium",
+  "saasPremiumSubTitle": "Pour les entreprises prêtes à intensifier leur communication d'équipe.",
+  "selfhostedPremiumSubTitle": "Pour les entreprises qui ont besoin d'accéder à plus de fonctionnalités.",
+  "entreprise": "Entreprise",
+  "saasEntrepriseSubTitle": "Pour les entreprises nécessitant une évolutivité et une gestion de haut niveau.",
+  "selfhostedEntrepriseSubTitle": "Pour les entreprises nécessitant une évolutivité, une gestion et des fonctionnalités illimitées de haut niveau.",
+  "contactSale": "Contact vente"
 }

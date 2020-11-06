@@ -194,6 +194,9 @@
     .displayNoneForMobile, .nomobile {
         display: none;
     }
+    .pricing-compare {
+        padding: 400px 0px;
+    }
 }
 
 @keyframes columAnimationMobile {
