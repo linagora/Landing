@@ -81,5 +81,15 @@
   "webApp" : "Web App",
   "desktopApp" : "Desktop App",
   "downloadTitle" : "Téléchargez Twake",
-  "downloadSubtitle" : "Utilisez Twake depuis notre application de bureau optimisée et lancez l’application directement depuis votre bureau"
+  "downloadSubtitle" : "Utilisez Twake depuis notre application de bureau optimisée et lancez l’application directement depuis votre bureau",
+
+
+
+		"staysafe-title" : "Restez chez vous et travaillez en sécurité",
+		"staysafe-subtitle" : "Twake encourage la distanciation sociale par le télétravail. Connectez-vous pour profiter de notre offre gratuite pendant 1 mois",
+		"staysafe-signInForFree" : "S'inscrire gratuitement",
+		"staysafe-helptitle" : "Aider à aplatir la courbe",
+		"staysafe-helpsubtitle" : "Le travail à domicile limite considérablement la propagation du virus. Faites votre part, travaillez à distance",
+		"staySafe-agreement" : "J'accepte de m'isoler et de profiter gratuitement de Twake"
+
 }
