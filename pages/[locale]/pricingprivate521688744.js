@@ -513,18 +513,18 @@ const Pricing = props => {
 										}
 										{saasMode &&
 
-										<div className="pricingBlocksIn">
+										<div className="pricingBlocksIn col-lg-9 col-md-9 col-sm-9">
 											<div className="pricingBlock">
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "40px" }}
+														style={{ fontSize: "24px" }}
 													>
 														{props.t(props, "standard")}
 													</span>
 												</div>
 												<div className="subTitlePlan">{props.t(props,"saasStandardSubTitle")}</div>
-												<div className="pricingAmount">5 € <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"byUserByMonth")}</span></div>
+												<div className="pricingAmount">5 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
@@ -537,13 +537,13 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "40px" }}
+														style={{ fontSize: "24px" }}
 													>
 													{props.t(props, "premium")}
 													</span>
 												</div>
 												<div className="subTitlePlan">{props.t(props,"saasPremiumSubTitle")}</div>
-											<div className="pricingAmount" style={{ marginTop: "72px" }}>7 € <span style={{fontWeight:"400",fontSize:"16px"}}>{props.t(props,"byUserByMonth")}</span></div>
+											<div className="pricingAmount" style={{ marginTop: "72px" }}>7 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
 
 												<a
 													href="https://app.twakeapp.com"
@@ -557,7 +557,7 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "40px" }}
+														style={{ fontSize: "24px" }}
 													>
 													{props.t(props, "entreprise")}
 													</span>
@@ -587,11 +587,11 @@ const Pricing = props => {
 							</div>
 						</div>
 						<div className="row" style={{marginTop:"32px"}}>
-							<div className="col-lg-12">
-								<table className="pricingTable">
+							<div className="table-responsive">
+								<table className="pricingTable table">
 									<thead>
 										<tr>
-											<th style={{border:"none"}}></th>
+											<th style={{ border: "none" }} scope="col"></th>
 											{plans[saasMode?"saas":"selhosted"].map(plan =>(
 												<th>{props.t(props,plan)}</th>
 											))}
@@ -601,7 +601,7 @@ const Pricing = props => {
 										{
 											features[saasMode?"saas":"selhosted"].map(section => {
 												let ret = [
-													<tr>
+													<tr scope="row">
 														<td colSpan="20" className="tsection">{props.t(props,section.title)}</td>
 													</tr>
 												];

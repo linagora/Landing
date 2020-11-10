@@ -2482,3 +2482,7 @@ a.demoTitle:hover {
 .bs-popover-top > .arrow::before {
   display: none;
 }
+
+.subTitlePlan {
+    height: 50%;
+}
