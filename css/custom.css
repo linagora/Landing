@@ -2484,6 +2484,9 @@ a.demoTitle:hover {
   display: none;
 }
 
+.subTitlePlan {
+    height: 50%;
+}
 
 
 /* staysafe */
