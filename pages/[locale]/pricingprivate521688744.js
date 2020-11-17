@@ -437,7 +437,6 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "24px" }}
 													>
 														{props.t(props, "community")}
 													</span>
@@ -447,7 +446,7 @@ const Pricing = props => {
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "6px 16px" }}
+													style={{ width: "100%", padding: "16px 8px" }}
 												>
 													{props.t(props, "freeTry")}
 												</a>
@@ -456,7 +455,6 @@ const Pricing = props => {
                       	<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "24px" }}
 													>
 														{props.t(props, "standard")}
 													</span>
@@ -466,7 +464,7 @@ const Pricing = props => {
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "6px 16px" }}
+													style={{ width: "100%", padding: "16px 8px" }}
 												>
 													{props.t(props, "freeTry")}
 												</a>
@@ -475,7 +473,6 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "24px" }}
 													>
 													{props.t(props, "premium")}
 													</span>
@@ -485,7 +482,7 @@ const Pricing = props => {
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "6px 16px" }}
+													style={{ width: "100%", padding: "16px 8px" }}
 												>
 													{props.t(props, "freeTry")}
 												</a>
@@ -494,7 +491,6 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "24px" }}
 													>
 													{props.t(props, "entreprise")}
 													</span>
@@ -504,7 +500,7 @@ const Pricing = props => {
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "6px 16px" }}
+													style={{ width: "100%", padding: "16px 8px" }}
 												>
 													{props.t(props, "contactSale")}
 												</a>
@@ -518,7 +514,6 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "24px" }}
 													>
 														{props.t(props, "standard")}
 													</span>
@@ -528,7 +523,7 @@ const Pricing = props => {
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "6px 16px" }}
+													style={{ width: "100%", padding: "16px 8px" }}
 												>
 													{props.t(props, "freeTry")}
 												</a>
@@ -537,7 +532,6 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "24px" }}
 													>
 													{props.t(props, "premium")}
 													</span>
@@ -548,7 +542,7 @@ const Pricing = props => {
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "6px 16px" }}
+													style={{ width: "100%", padding: "16px 8px" }}
 												>
 													{props.t(props, "freeTry")}
 												</a>
@@ -557,7 +551,6 @@ const Pricing = props => {
 												<div className="titlePlan">
 													<span
 														className="big amount"
-														style={{ fontSize: "24px" }}
 													>
 													{props.t(props, "entreprise")}
 													</span>
@@ -567,7 +560,7 @@ const Pricing = props => {
 												<a
 													href="https://app.twakeapp.com"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "6px 16px" }}
+													style={{ width: "100%", padding: "16px 8px" }}
 												>
 													{props.t(props, "contactSale")}
 												</a>
@@ -626,6 +619,9 @@ const Pricing = props => {
 														</tr>
 													)
 												});
+												/*ret.push(
+													<tr colSpan="20" className="emptyTr"><td className="" style={{border: "none",height:"54px"}}></td></tr>
+												)*/
 												return ret;
 											})
 										}

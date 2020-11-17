@@ -11,7 +11,7 @@
   "unlimitedstorage" : "Stockage illimité",
   "mailSupport" : "Support par mail",
   "useForFree" : "Utilisez gratuitement",
-  "byUserByMonth" : "/utilisateurs annuellement",
+  "byUserByMonth" : "/utilisateurs",
   "unlimitedWorkspace" : "Espaces de travail illimités",
   "unlimitedMessage" : "Messages illimités",
   "premiumIntegration" : "Intégrations premium",
@@ -39,7 +39,7 @@
   "saasSubTitle": "Cloud offering hosted by Twake",
 	"compare" : "Comparer nos plans",
 
-  "selfhostedCommunautySubTitle": "Pour les équipes qui sont prêt à controler et centraliser leurs communications.",
+  "selfhostedCommunautySubTitle": "Pour les équipes qui sont prêt à centraliser leurs communications.",
   "standard": "Standard",
   "community": "Community",
   "saasStandardSubTitle": "Pour les équipes qui sont prêt à controler et centraliser leurs communications.",
