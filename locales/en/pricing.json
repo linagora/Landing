@@ -7,7 +7,7 @@
    "standard" : "Standard",
 	 "saasStandardSubTitle" : "For teams that are ready to control and centralize their communication.",
 	 "selfhostedStandardSubTitle" : "For businesses ready to step up their team communication.",
-	 "premium":"Premium",
+	 "premium" : "Premium",
 	 "saasPremiumSubTitle" : "For businesses ready to step up their team communication.",
 	 "selfhostedPremiumSubTitle" : "For business that need to access more features.",
 	 "entreprise" : "Entreprise",
@@ -15,6 +15,7 @@
 	 "selfhostedEntrepriseSubTitle" : "For businesses needing high-level scalability, management and unlimited features.",
 	 "contactSale" : "Contact sale",
 	 "free" : "free",
+	 "tieredPricing" : "Tiered Pricing",
 
    "mailSupport" : "Email support",
    "useForFree" : "Use for free",

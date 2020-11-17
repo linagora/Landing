@@ -87,6 +87,11 @@ a:hover {
 .container-fluid {
   padding: 0;
 }
+@media (min-width:1500px){
+	.container{
+		min-width: 1400px !important;
+	}
+}
 @media (min-width: 992px) {
   .navbar a {
     margin-left: 0px !important;
