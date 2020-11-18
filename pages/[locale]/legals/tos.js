@@ -1,7 +1,7 @@
 import Layout from "../../../components/layout/layout";
 const Tos = () => (
   <Layout>
-    <div class="container" style={{ overflowX: "hidden" }}>
+    <div className="container" style={{ overflowX: "hidden" }}>
       <section>
         <h2>Twake Terms of Service</h2>
         <br />

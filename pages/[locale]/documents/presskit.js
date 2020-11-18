@@ -3,18 +3,18 @@ const Security = () => (
   <Layout>
     <div className="container" style={{ overflowX: "hidden" }}>
       <section>
-        <h2>Twake Security</h2>
+        <h2>Twake Presskit</h2>
         <br />
         <br />
-        Read about how we manage our security here :{" "}
-        <a href="/files/security.pdf" target="_BLANK">
-          security.pdf
+        Get our presskit here :{" "}
+        <a href="/medias/presskit.zip" target="_BLANK">
+          presskit.zip
         </a>
         <br />
         <br />
         <br />
         <hr />
-        <script>document.location = "/files/security.pdf";</script>
+        <script>document.location = "/medias/presskit.zip";</script>
       </section>
     </div>
   </Layout>
