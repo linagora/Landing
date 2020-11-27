@@ -67,7 +67,7 @@
   "security_encrypted_data": "Зашифрованные данные",
   "security_encrypted_data_desc": "Ваши файлы и данные всегда зашифрованы, и никто не может прочитать их, кроме вас",
   "security_location": "Расположено во Франции",
-  "security_location_desc": "Ваши файлы и данные хранятся во Франции ! Twake соответствует правилам RGPD",
+  "security_location_desc": "Ваши файлы и данные хранятся во Франции ! Twake соответствует правилам GDPR",
   "security_transfers": "Безопасные передачи",
   "security_transfers_desc": "HTTPS/SSL и сквозная связь с вебсокетами включена",
   "security_onpremise": "Местное предложение",
