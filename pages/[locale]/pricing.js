@@ -432,7 +432,7 @@ const Pricing = props => {
                 <div className="pricingBlocks">
 
 									{!saasMode &&
-                  <div className="pricingBlocksIn">
+                  <div className="">
 										<div className="pricingBlock col-lg-3 col-md-3">
 												<div className="titlePlan">
 													<span
@@ -509,7 +509,7 @@ const Pricing = props => {
 										}
 										{saasMode &&
 
-										<div className="pricingBlocksIn">
+										<div className="">
 											{/*<div className="pricingBlock col-lg-3 col-md-3">
 												<div className="titlePlan">
 													<span
