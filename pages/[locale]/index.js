@@ -3,12 +3,14 @@ import Head from "next/head";
 import Layout from "../../components/layout/layout";
 import { i18n, withTranslation } from "../../i18n";
 import { Fork, Star } from 'react-github-buttons';
+import ModalVideo from 'react-modal-video';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      carousselImg: 0
+      carousselImg: 0,
+			isOpen : false,
     };
   }
 
@@ -52,6 +54,7 @@ class Home extends React.Component {
               <div className="row rowWithScreen">
                 <div className="col-lg-6">
                   <div className="colTitle">
+										<ModalVideo channel='youtube' autoplay isOpen={this.state.isOpen} videoId="RzzosDMSl10" onClose={() => this.setState({isOpen:false})} />
                     <h1 className="title ">
                       {this.props.t(this.props, "title")}
                     </h1>
@@ -67,24 +70,24 @@ class Home extends React.Component {
                         {this.props.t(this.props, "tryForFree")}
                       </a>
                       <a
-                        href={
-                          "/" + this.props.getLang(this.props) + "/download"
-                        }
-                        className="btn"
-                        style={{ marginLeft: "16px", marginRight: "16px" }}
+                        className="discoverLink"
+                        style={{ marginLeft: "16px",fontWeight:"500"}}
+												onClick={()=>this.setState({isOpen:true})}
                       >
-                        <img
+                        {this.props.t(this.props, "discoverTwake")}
+												<img
+													style={{ marginLeft: "8px" }}
                           className="icon"
-                          src="/medias/download.png"
+                          src="/medias/arrow-right.svg"
                           alt="download"
                         />
-                        {this.props.t(this.props, "download")}
                       </a>
                     </div>
                     <div className="customers d-none d-lg-block">
 											<Star style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
 											<Fork style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
                     </div>
+										<a href="#GT4G" className="gtfgHeaderLink"><div className="gtfgHeader">#GOODTECH4GOOD</div></a>
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -335,7 +338,83 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
-          <section className="sectionWithLiteBackground">
+					<section className="sectionWithLiteBackground">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="subline">
+                    {this.props.t(this.props, "security")}
+                  </div>
+                  <div
+                    className="col-lg-12 line"
+                    style={{ marginBottom: "24px" }}
+                  >
+                    {this.props.t(this.props, "securitySub")}
+                  </div>
+                </div>
+                <div
+                  className="col-lg-6 offset-lg-3 textCenter"
+                  dangerouslySetInnerHTML={{
+                    __html: this.props.t(this.props, "securityDescription")
+                  }}
+                />
+                <div
+                  className="col-lg-10 offset-lg-1 row"
+                  style={{ marginTop: "60px" }}
+                >
+                  <div className="col-lg-3 textCenter securityInfo">
+                    <img
+                      src="/medias/secure/encrypted_data.svg"
+                      alt="Encrypted Data"
+                    />
+                    <br />
+                    <b>{this.props.t(this.props, "security_encrypted_data")}</b>
+                    <br />
+                    <span>
+                      {this.props.t(this.props, "security_encrypted_data_desc")}
+                    </span>
+                  </div>
+                  <div className="col-lg-3 textCenter securityInfo">
+                    <img
+                      src="/medias/secure/location.svg"
+                      alt="Located in France"
+                    />
+                    <br />
+                    <b>{this.props.t(this.props, "security_location")}</b>
+                    <br />
+                    <span>
+                      {this.props.t(this.props, "security_location_desc")}
+                    </span>
+                  </div>
+                  <div className="col-lg-3 textCenter securityInfo">
+                    <img
+                      src="/medias/secure/transfers.svg"
+                      alt="Secure Transfers"
+                    />
+                    <br />
+                    <b>{this.props.t(this.props, "security_transfers")}</b>
+                    <br />
+                    <span>
+                      {this.props.t(this.props, "security_transfers_desc")}
+                    </span>
+                  </div>
+                  <div className="col-lg-3 textCenter securityInfo">
+                    <img
+                      src="/medias/secure/onpremise.svg"
+                      alt="On-premise Offers"
+                    />
+                    <br />
+                    <b>{this.props.t(this.props, "security_onpremise")}</b>
+                    <br />
+                    <span>
+                      {this.props.t(this.props, "security_onpremise_desc")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section >
             <div className="container">
               <div className="row">
                 <div className="col-lg-12">
@@ -419,106 +498,51 @@ class Home extends React.Component {
           //   </div>
           // </section>
 				}
-          <section>
+
+					<section className="sectionWithLiteBackground" id="GT4G" style={{backgroundImage : "linear-gradient(#f5fff4, #f5fff494)"}}>
             <div className="container">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="subline">
-                    {this.props.t(this.props, "security")}
+                  <div className="subline" style={{color:"var(--greenNature)"}}>
+                    {this.props.t(this.props, "goodtech4good")}
                   </div>
                   <div
                     className="col-lg-12 line"
                     style={{ marginBottom: "24px" }}
                   >
-                    {this.props.t(this.props, "securitySub")}
+                    {this.props.t(this.props, "goodtech4goodSub")}
                   </div>
                 </div>
-                <div
-                  className="col-lg-6 offset-lg-3 textCenter"
-                  dangerouslySetInnerHTML={{
-                    __html: this.props.t(this.props, "securityDescription")
-                  }}
-                />
-                <div
-                  className="col-lg-10 offset-lg-1 row"
-                  style={{ marginTop: "60px" }}
-                >
-                  <div className="col-lg-3 textCenter securityInfo">
-                    <img
-                      src="/medias/secure/encrypted_data.svg"
-                      alt="Encrypted Data"
-                    />
-                    <br />
-                    <b>{this.props.t(this.props, "security_encrypted_data")}</b>
-                    <br />
-                    <span>
-                      {this.props.t(this.props, "security_encrypted_data_desc")}
-                    </span>
-                  </div>
-                  <div className="col-lg-3 textCenter securityInfo">
-                    <img
-                      src="/medias/secure/location.svg"
-                      alt="Located in France"
-                    />
-                    <br />
-                    <b>{this.props.t(this.props, "security_location")}</b>
-                    <br />
-                    <span>
-                      {this.props.t(this.props, "security_location_desc")}
-                    </span>
-                  </div>
-                  <div className="col-lg-3 textCenter securityInfo">
-                    <img
-                      src="/medias/secure/transfers.svg"
-                      alt="Secure Transfers"
-                    />
-                    <br />
-                    <b>{this.props.t(this.props, "security_transfers")}</b>
-                    <br />
-                    <span>
-                      {this.props.t(this.props, "security_transfers_desc")}
-                    </span>
-                  </div>
-                  <div className="col-lg-3 textCenter securityInfo">
-                    <img
-                      src="/medias/secure/onpremise.svg"
-                      alt="On-premise Offers"
-                    />
-                    <br />
-                    <b>{this.props.t(this.props, "security_onpremise")}</b>
-                    <br />
-                    <span>
-                      {this.props.t(this.props, "security_onpremise_desc")}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="sectionWithLiteBackground">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="subline">
-                    {this.props.t(this.props, "opensource")}
-                  </div>
-                  <div
-                    className="col-lg-12 line"
-                    style={{ marginBottom: "24px" }}
-                  >
-                    {this.props.t(this.props, "opensourceSub")}
-                  </div>
-                </div>
-                <div
-                  className="col-lg-6 offset-lg-3 textCenter"
-                  dangerouslySetInnerHTML={{
-                    __html: this.props.t(this.props, "opensourceDescription")
-                  }}
-                />
-                <div className="col-lg-12" style={{textAlign:"center"}}>
-                  <Star style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
-                  <Fork style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
-                </div>
+							</div>
+							<div className="row">
+								<div className="col-lg-3 textCenter gt4gCardContainer">
+									<div className="gt4gCard">
+										<img src="/medias/un_sdg.png"  className="imgGtfg" />
+											<div className="titleCard">{this.props.t(this.props, "gt4g1Title")}</div>
+											<div className="descriptionCard">{this.props.t(this.props, "gt4g1Description")}</div>
+										</div>
+									</div>
+								<div className="col-lg-3 textCenter gt4gCardContainer" >
+									<div className="gt4gCard">
+										<img src="/medias/Bcorp.png"  className="imgGtfg"/>
+										<div className="titleCard">{this.props.t(this.props, "gt4g2Title")}</div>
+										<div className="descriptionCard">{this.props.t(this.props, "gt4g2Description")}</div>
+									</div>
+								</div>
+								<div className="col-lg-3 textCenter gt4gCardContainer" >
+									<div className="gt4gCard">
+										<img src="/medias/tfg.png" className="imgGtfg" />
+										<div className="titleCard">{this.props.t(this.props, "gt4g3Title")}</div>
+										<div className="descriptionCard">{this.props.t(this.props, "gt4g3Description")}</div>
+										</div>
+								</div>
+								<div className="col-lg-3 textCenter gt4gCardContainer" >
+									<div className="gt4gCard">
+										<img src="/medias/carbonnegative.png" className="imgGtfg"/>
+										<div className="titleCard">{this.props.t(this.props, "gt4g4Title")}</div>
+										<div className="descriptionCard">{this.props.t(this.props, "gt4g4Description")}</div>
+									</div>
+								</div>
               </div>
             </div>
           </section>

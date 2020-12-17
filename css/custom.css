@@ -4,6 +4,7 @@
   --secondary: #182952;
   --primary_background: #f3f2ff;
   --green: #3dcc97;
+  --greenNature: #7af96b;
   --white: #ffffff;
   --black: #444444;
   --red: #ff5154;
@@ -51,6 +52,10 @@ a {
 a:hover {
   text-decoration: underline var(--primary);
   color: unset;
+}
+a.discoverLink:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 .input{
 	border-radius: 3px;
@@ -2517,4 +2522,43 @@ a.demoTitle:hover {
 }
 .staySafe .colTitle{
 	max-width: 475px !important;
+}
+
+
+/* gtfg */
+
+#landing .gtfgHeaderLink{
+	text-decoration: none;
+}
+
+#landing .gtfgHeader{
+	margin-top: 32px;
+	font-size: 24px;
+	text-transform: capitalize;
+	font-weight: bold;
+	color : var(--greenNature);
+}
+
+#landing .gt4gCardContainer{
+	padding : 12px;
+	display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#landing .gt4gCard{
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.08);
+	border-radius: 4px;
+	background: var(--white);
+	padding : 24px;
+  height: 100%;
+}
+#landing .imgGtfg{
+	width: 100px;
+	margin:auto;
+	display: block;
+}
+#landing .titleCard{
+	font-weight: bold;
+	margin-bottom: 4px;
+	margin-top:8px;
 }
