@@ -61,11 +61,12 @@ class Home extends React.Component {
                     <div className="btnBloc">
                       <a
                         id="submitFormButtonForCapterra"
-                        href="https://app.twakeapp.com"
+                        href="https://beta.twake.app"
                         className="btn btn-purple"
                       >
                         {this.props.t(this.props, "tryForFree")}
                       </a>
+		      {/*
                       <a
                         href={
                           "/" + this.props.getLang(this.props) + "/download"
@@ -80,6 +81,7 @@ class Home extends React.Component {
                         />
                         {this.props.t(this.props, "download")}
                       </a>
+		      */}
                     </div>
                     <div className="customers d-none d-lg-block">
 											<Star style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
@@ -553,7 +555,7 @@ class Home extends React.Component {
                       />
                     </div>
                     <div className="textEverywhere">
-                      {this.props.t(this.props, "mobileApp")}
+                      {"Coming soon" /* this.props.t(this.props, "mobileApp") */}
                     </div>
                   </div>
                 </div>
