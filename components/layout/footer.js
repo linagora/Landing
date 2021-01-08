@@ -13,12 +13,12 @@ const Footer = ({ t, getLang }) => {
                 <div className="footerTitle">
                   {t({ router: router }, "product")}
                 </div>
-                <a
+		{/*<a
                   className="linkFooter"
                   href={"/" + getLang({ router: router }) + "/" + "download"}
                 >
                   {t({ router: router }, "download")}
-                </a>
+                </a>*/}
                 <a
                   className="linkFooter"
                   href={
@@ -27,7 +27,7 @@ const Footer = ({ t, getLang }) => {
                 >
                   {t({ router: router }, "features")}
                 </a>
-                <a className="linkFooter" href="https://app.twakeapp.com">
+                <a className="linkFooter" href="https://beta.twake.app">
                   {t({ router: router }, "openTwake")}
                 </a>
                 <a
