@@ -42,7 +42,7 @@ class StaySafe extends React.Component {
                     <div className="btnBloc">
                       <a
                         id="submitFormButtonForCapterra"
-                        href="https://app.twakeapp.com"
+                        href="https://beta.twake.app"
                         className="btn btn-purple"
                       >
                         {this.props.t(this.props, "staysafe-signInForFree")}
