@@ -47,7 +47,7 @@ const Header = ({ t, scrolled, getLang }) => {
             </NavDropdown>
           </Nav>
           <Nav.Item className="nav-item">
-            <Nav.Link className="nav-link" href="https://app.twakeapp.com">
+            <Nav.Link className="nav-link" href="https://beta.twake.app">
               {t({ router: router }, "connection")}
             </Nav.Link>
           </Nav.Item>
