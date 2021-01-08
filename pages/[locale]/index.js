@@ -96,7 +96,7 @@ class Home extends React.Component {
 											<Star style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
 											<Fork style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
                     </div>
-										<a href="#GT4G" className="gtfgHeaderLink"><div className="gtfgHeader">#GOODTECH4GOOD</div></a>
+										{/* <a href="#GT4G" className="gtfgHeaderLink"><div className="gtfgHeader">#GOODTECH4GOOD</div></a> */}
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -519,7 +519,7 @@ class Home extends React.Component {
           // </section>
 				}
 
-					<section className="sectionWithLiteBackground" id="GT4G" style={{backgroundImage : "linear-gradient(#f5fff4, #f5fff494)"}}>
+					{/* <section className="sectionWithLiteBackground" id="GT4G" style={{backgroundImage : "linear-gradient(#f5fff4, #f5fff494)"}}>
             <div className="container">
               <div className="row">
                 <div className="col-lg-12">
@@ -565,7 +565,7 @@ class Home extends React.Component {
 								</div>
               </div>
             </div>
-          </section>
+          </section> */}
           <section className="everywhere">
             <div className="container">
               <div className="row">
@@ -597,7 +597,7 @@ class Home extends React.Component {
                       />
                     </div>
                     <div className="textEverywhere">
-                      {this.props.t(this.props, "mobileApp")}
+                      {"Coming soon" /* this.props.t(this.props, "mobileApp") */}
                     </div>
                   </div>
                 </div>

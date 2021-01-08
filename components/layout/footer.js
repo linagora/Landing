@@ -13,12 +13,12 @@ const Footer = ({ t, getLang }) => {
                 <div className="footerTitle">
                   {t({ router: router }, "product")}
                 </div>
-                <a
+                {/*<a
                   className="linkFooter"
                   href={"/" + getLang({ router: router }) + "/" + "download"}
                 >
                   {t({ router: router }, "download")}
-                </a>
+                </a>*/}
                 <a
                   className="linkFooter"
                   href={

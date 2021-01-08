@@ -20,7 +20,7 @@ class StaySafe extends React.Component {
 
 	openTwake(){
 		setTimeout(()=>{
-			document.location.href="https://web.twake.app";
+			document.location.href="https://beta.twake.app";
 		},500);
 	}
   render() {

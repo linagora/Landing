@@ -12,6 +12,8 @@ const Pricing = props => {
 	let plans = {
 		saas : [
 			"standard",
+			"premium",
+			"entreprise"
 		],
 		selhosted :[
 			"community",
@@ -32,7 +34,7 @@ const Pricing = props => {
 					},
 					{
 						name : "drive",
-						available : ["6 GB " +props.t(props,"peruser"),"11 GB "+props.t(props,"peruser"),props.t(props,"unlimited")]
+						available : ["1TB","5TB",props.t(props,"unlimited")]
 					},
 					{
 						name : "calendar",
@@ -44,11 +46,11 @@ const Pricing = props => {
 					},
 					{
 						name : "video",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [true,true,true],
 					},
 					{
 						name : "office",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [true,true,true],
 					},
 					{
 						name : "guest",
@@ -58,6 +60,10 @@ const Pricing = props => {
 						name : "email",
 						available : ["",props.t(props,"comingsoon"),props.t(props,"comingsoon")],
 					},
+					{
+						name : "teamSpace",
+						available : ["",props.t(props,"comingsoon"),props.t(props,"comingsoon")],
+					}
 				],
 			},
 			{
@@ -65,15 +71,15 @@ const Pricing = props => {
 				features : [
 					{
 						name : "strongpasswordpolicy",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [true,true,true],
 					},
 					{
 						name : "2fa",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [true,true,true],
 					},
 					{
 						name : "ssoauthentification",
-						available : [false,false,true],
+						available : [true,true,true],
 					},
 					{
 						name : "dataeurope",
@@ -156,6 +162,19 @@ const Pricing = props => {
 					}
 				]
 			},
+			{
+				title : "integration",
+				features : [
+					{
+						name : "jitsi",
+						available : [true,true,true],
+					},
+					{
+						name : "onlyoffice",
+						available : [true,true,true],
+					}
+				]
+			}
 		],
 		selhosted : [
 			{
@@ -384,66 +403,199 @@ const Pricing = props => {
 });
   return (
     <Layout page="pricingTitle">
-      <div className="container-fluid" id="pricing" className="ces">
+      <div className="container-fluid" id="pricing">
         <section className="sectionWithScreen">
           <div className="container">
             <div className="rowWithGradientBackground">
-              <h1 className="subline">{props.t(props, "ces.dealrefuse")}</h1>
-              <div className="col-lg-12 row" style={{ paddingTop: "32px" }}>
-					<div className="col-lg-5 col-md-12">
-						<div className="tittleOffer line" style={{"text-align" : "left", marginBottom:"12px"}}>
-							{props.t(props, "cesoffer.join1")}
-						</div>
-						<div className="" style={{marginBottom:"8px"}}>
-							{props.t(props, "cesoffer.join2")}
-						</div>
-						<div className="" style={{marginBottom:"8px"}}>
-							{props.t(props, "cesoffer.join3")}
-						</div>
-						<a
-						href="http://web-twakeconsole.linagora.vn/signup?type=saas&plan=free&subcription=freetrial"
-						className="discoverLink"
-						style={{ fontWeight:"500"}}
-						onClick = {()=>{
-							analytics.track('TryForFree_click',{
-								from : "Pricing_join1"
-							});
-						}}
+              <h1 className="subline">{props.t(props, "pricingTitle")}</h1>
+              <div
+                className="col-lg-12 line"
+                style={{ marginBottom: "24px", marginTop: "8px" }}
+              >
+                {props.t(props, "titleSub")}
+              </div>
+              {/* <div className="col-lg-12 buttonPricingBloc">
+                <div
+                  style={{borderRadius : "4px 0px 0px 4px"}}
+                  className={"buttonPricing " + (saasMode ? "" : "selected")}
+                  id="buttonPricingMonthly"
+                  onClick={() => setSaasMode(false)}
+                >
+									<div className="pricingTitle">{props.t(props, "onPremTitle")}</div>
+									<div className="pricingSubTitle">{props.t(props, "onPremSubTitle")}</div>
+                </div>
+                <div
+                  style={{ borderRadius :"0px 4px 4px 0px" }}
+                  className={"buttonPricing " + (saasMode ? "selected" : "")}
+                  id="buttonPricingAnnual"
+                  onClick={() => setSaasMode(true)}
+                >
+									<div className="pricingTitle">{props.t(props, "saasTitle")}</div>
+									<div className="pricingSubTitle">{props.t(props, "saasSubTitle")}</div>
+                </div>
+              </div> */}
+              <div className="col-lg-12" style={{ paddingTop: "1px" }}>
+                <div className="pricingBlocks">
+					{!saasMode &&
+						<div className="">
+							<div className="pricingBlock col-lg-3 col-md-3">
+									<div className="titlePlan">
+										<span
+											className="big amount"
+										>
+											{props.t(props, "community")}
+										</span>
+									</div>
+									<div className="subTitlePlan">{props.t(props, "selfhostedCommunautySubTitle")}</div>
+									<div className="pricingAmount"><span className="big amount" style={{ fontSize: "24px" }}>{props.t(props, "free")}</span></div>
+									<a
+										href="https://github.com/TwakeApp/Twake"
+										className="btn btn-purple"
+										style={{ width: "100%", padding: "16px 8px" }}
+									>
+										{props.t(props, "freeTry")}
+									</a>
+								</div>
+										{/*<div className="pricingBlock col-lg-3 col-md-3">
+                      	<div className="titlePlan">
+													<span
+														className="big amount"
+													>
+														{props.t(props, "standard")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"selfhostedStandardSubTitle")}</div>
+											<div className="pricingAmount" style={{ marginTop: "72px" }}>35 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
+												<a
+													href="https://beta.twake.app"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "16px 8px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+										<div className="pricingBlock col-lg-3 col-md-3">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+													>
+													{props.t(props, "premium")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"selfhostedPremiumSubTitle")}</div>
+												<div className="pricingAmount" style={{marginTop:"72px"}}>70 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
+												<a
+													href="https://beta.twake.app"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "16px 8px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+											<div className="pricingBlock col-lg-3 col-md-3">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+													>
+													{props.t(props, "entreprise")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"selfhostedEntrepriseSubTitle")}</div>
+												<div className="pricingAmount">{props.t(props,"")} <span className="big amount" style={{ fontSize: "24px" }}>{props.t(props,"tieredPricing")}</span></div>
+												<a
+													href="https://beta.twake.app"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "16px 8px" }}
+												>
+													{props.t(props, "contactSale")}
+												</a>
+											</div>*/}
+											</div>
+										}
+										{saasMode &&
 
-                      >
-                        {props.t(props, "cesoffer.joinus")}
-					<img
-						style={{ marginLeft: "8px" }}
-                          className="icon"
-                          src="/medias/arrow-right.svg"
-                          alt="join us"
-                        />
-                      </a>
-					</div>
-					<div className="pricingBlock col-lg-5 offset-lg-2 offset-md-2 col-md-8">
-						<div className="titlePlan">
-							{props.t(props, "cesoffer.titleoffer")}
-						</div>
-						<div class="divider"></div>
-						<div class="dividertag">Early Bird</div>
-						<div className="pricingAmount"><span className="lined">4.19€</span>2.99€<span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
-						<div class="feature"><img src="/medias/check-alt-green.png" alt=""/><div class="nameFeature">{props.t(props,"cesoffer.av1")}</div></div>
-						<div class="feature"><img src="/medias/check-alt-green.png" alt=""/><div class="nameFeature">{props.t(props,"cesoffer.av2")}</div></div>
-						<div class="feature"><img src="/medias/check-alt-green.png" alt=""/><div class="nameFeature">{props.t(props,"cesoffer.av3")}</div></div>
-						<div class="feature"><img src="/medias/check-alt-green.png" alt=""/><div class="nameFeature">{props.t(props,"cesoffer.av4")}</div></div>
-						<a
-							href="http://web-twakeconsole.linagora.vn/signup?type=saas&plan=free&subcription=freetrial"
-							className="btn btn-purple"
-							style={{ width: "100%", padding: "8px 8px",marginTop:"24px" }}
-							onClick = {()=>{
-								analytics.track('TryForFree_click',{
-									from : "Pricing_join2"
-								});
-							}}
-						>
-							{props.t(props, "cesoffer.joinfamily")}
-						</a>
-					</div>										
+										<div className="">
+											<div className="pricingBlock col-lg-3 col-md-3">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+													>
+														{props.t(props, "free")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"saasStandardSubTitle")}</div>
+												<div className="pricingAmount">Free<span style={{fontWeight:"400",fontSize:"14px"}}></span></div>
+												<a
+													href="http://web-twakeconsole.linagora.vn/signup?type=saas&plan=free&subcription=freetrial"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "16px 8px" }}
+												>
+													{props.t(props, "use")}
+												</a>
+											</div>
+											<div className="pricingBlock col-lg-3 col-md-3">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+													>
+														{props.t(props, "standard")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"saasStandardSubTitle")}</div>
+												<div className="pricingAmount">5 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
+												<a
+													href="https://beta.twake.app"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "6px 16px" }}
+													onClick = {()=>{
+														analytics.track('TryForFree_click',{
+															from : "FreeTry"
+														});
+													}}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+											{/*<div className="pricingBlock">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+													>
+													{props.t(props, "premium")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"saasPremiumSubTitle")}</div>
+											<div className="pricingAmount" style={{ marginTop: "72px" }}>7 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
+
+												<a
+													href="https://beta.twake.app"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "16px 8px" }}
+												>
+													{props.t(props, "freeTry")}
+												</a>
+											</div>
+											<div className="pricingBlock">
+												<div className="titlePlan">
+													<span
+														className="big amount"
+													>
+													{props.t(props, "entreprise")}
+													</span>
+												</div>
+												<div className="subTitlePlan">{props.t(props,"saasEntrepriseSubTitle")}</div>
+											<div className="pricingAmount" style={{ marginTop: "72px" }}>{props.t(props,"")} <span className="big amount" style={{ fontSize: "24px" }}>{props.t(props,"tieredPricing")}</span></div>
+												<a
+													href="https://beta.twake.app"
+													className="btn btn-purple"
+													style={{ width: "100%", padding: "16px 8px" }}
+												>
+													{props.t(props, "contactSale")}
+												</a>
+											</div>*/}
+										</div>
+										}
+                </div>
               </div>
             </div>
           </div>
@@ -452,11 +604,11 @@ const Pricing = props => {
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-12 faqcol">
-	              <div className="line">{props.t(props, "cesoffer.compare")}</div>
+	              <div className="line">{props.t(props, "compare")}</div>
 							</div>
 						</div>
 						<div className="row" style={{marginTop:"32px"}}>
-							<div className="offset-lg-3 col-lg-6 col-md-12 table-responsive">
+							<div className="table-responsive">
 								<table className="pricingTable table">
 									<thead>
 										<tr>
@@ -479,16 +631,18 @@ const Pricing = props => {
 														<tr className="tfeature">
 															<td className="featureName">{props.t(props,feat.name)}</td>
 															{
-																<td>{
-																	(feat.available[1].length && feat.available[1].length)>0?
-																	feat.available[1]
-																	:
-																	feat.available[1]==true
-																		?
-																			<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />
+																feat.available.map(available =>(
+																	<td>{
+																		(available.length && available.length)>0?
+																			available
 																		:
-																			""
-																}</td>
+																			available==true
+																			?
+																				<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />
+																			:
+																				""
+																	}</td>
+																))
 															}
 														</tr>
 													)
@@ -511,6 +665,33 @@ const Pricing = props => {
               <div className="col-lg-12 ">
                 <div className="line">{props.t(props, "faq")}</div>
                 <div className="faq">
+                  <div
+                    className={"question " + (open1 ? "" : "closeQuestion")}
+                    onClick={() => setOpen1(!open1)}
+                  >
+                    <div className="faqTitle">
+                      <div style={{ display: "inline-block", flex: "1" }}>
+                        {props.t(props, "canITry")}
+                      </div>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "inline-block",
+                          marginTop: "4px",
+                          float: "right",
+                          height: "16px",
+                          width: "16px"
+                        }}
+                      >
+                        <div className="vertB vertB1"></div>
+                        <div className="horB"></div>
+                      </div>
+                    </div>
+                    <div className="faqDescription">
+                      {props.t(props, "canITryR")}
+                    </div>
+                  </div>
+                  <div className="separator"></div>
                   <div
                     className={"question " + (open2 ? "" : "closeQuestion")}
                     onClick={() => setOpen2(!open2)}
