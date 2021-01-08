@@ -395,6 +395,12 @@ const Pricing = props => {
 
   let [saasMode, setSaasMode] = useState(true);
 
+  React.useEffect(() => {
+	window.analytics.page({
+	  category: "Pricing",
+	  name: "Pricing",
+	});
+});
   return (
     <Layout page="pricingTitle">
       <div className="container-fluid" id="pricing">
@@ -539,9 +545,14 @@ const Pricing = props => {
 												<div className="subTitlePlan">{props.t(props,"saasStandardSubTitle")}</div>
 												<div className="pricingAmount">5 € <span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
 												<a
-													href="http://web-twakeconsole.linagora.vn/signup?type=saas&plan=standard&subcription=freetrial"
+													href="https://beta.twake.app"
 													className="btn btn-purple"
-													style={{ width: "100%", padding: "16px 8px" }}
+													style={{ width: "100%", padding: "6px 16px" }}
+													onClick = {()=>{
+														analytics.track('TryForFree_click',{
+															from : "FreeTry"
+														});
+													}}
 												>
 													{props.t(props, "freeTry")}
 												</a>

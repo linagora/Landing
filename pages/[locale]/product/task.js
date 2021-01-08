@@ -5,7 +5,14 @@ import Layout from "../../../components/layout/layout";
 import { withTranslation } from "../../../i18n";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-const Task = props => (
+const Task = props => {
+  React.useEffect(() => {
+		window.analytics.page({
+			name: "Task",
+			category: "Product",
+		});
+	});
+  return(
   <Layout page="productTask">
     <div className="container-fluid" id="product">
       <section className="">
@@ -180,6 +187,7 @@ const Task = props => (
     </div>
   </Layout>
 );
+                  }
 
 Task.getInitialProps = async () => ({
   namespacesRequired: ["product"],

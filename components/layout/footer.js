@@ -27,12 +27,22 @@ const Footer = ({ t, getLang }) => {
                 >
                   {t({ router: router }, "features")}
                 </a>
-                <a className="linkFooter" href="https://app.twakeapp.com">
+                <a className="linkFooter" href="https://beta.twake.app" onClick = {()=>{
+										analytics.track('TryForFree_click',{
+											from : "openTwake_foother"
+										});
+									}}
+									>
                   {t({ router: router }, "openTwake")}
                 </a>
                 <a
                   className="linkFooter"
                   href={"/" + getLang({ router: router }) + "/" + "pricing"}
+									onClick={()=>{
+										analytics.track('pricingLink_click',{
+											from : 'footer'
+										});
+									}}
                 >
                   {t({ router: router }, "pricing")}
                 </a>

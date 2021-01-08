@@ -6,7 +6,14 @@ import Layout from "../../../components/layout/layout";
 import { withTranslation } from "../../../i18n";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-const Calendar = props => (
+const Calendar = props => {
+  React.useEffect(() => {
+		window.analytics.page({
+			name: "Calendar",
+			category: "Product",
+		});
+  });
+  return(
   <Layout page="productCalendar">
     <div className="container-fluid" id="product">
       <section className="">
@@ -174,7 +181,8 @@ const Calendar = props => (
       </section>
     </div>
   </Layout>
-);
+  );
+}
 
 Calendar.getInitialProps = async () => ({
   namespacesRequired: ["product"],

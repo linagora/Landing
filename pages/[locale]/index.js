@@ -15,6 +15,10 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    window.analytics.page({
+			category: "Home",
+			name: "Home",
+		})
     setInterval(() => {
       this.setState({ carousselImg: (this.state.carousselImg + 1) % 4 });
     }, 5000);
@@ -64,8 +68,13 @@ class Home extends React.Component {
                     <div className="btnBloc">
                       <a
                         id="submitFormButtonForCapterra"
-                        href="https://app.twakeapp.com"
+                        href="https://beta.twake.app"
                         className="btn btn-purple"
+												onClick={()=>{
+													analytics.track('TryForFree_click',{
+														from : "bigfirst_home"
+													});
+												}}
                       >
                         {this.props.t(this.props, "tryForFree")}
                       </a>
@@ -174,7 +183,12 @@ class Home extends React.Component {
                     }}
                   ></div>
                   <div className="startFree">
-                    <a href="#">
+                  <a href="https://beta.twake.app"
+										onClick={()=>{
+											analytics.track('TryForFree_click',{
+												from : "tryforfree1_home"
+											});
+										}}>
                       {this.props.t(this.props, "startForFree")}
                       <img
                         src="/medias/right.png"
@@ -225,7 +239,13 @@ class Home extends React.Component {
                     }}
                   ></div>
                   <div className="startFree">
-                    <a href="#">
+                    <a href="https://beta.twake.app"
+                        onClick={()=>{
+                          analytics.track('TryForFree_click',{
+                            from : "tryforfree2_home"
+                          });
+                      }}
+                      >
                       {this.props.t(this.props, "startProject")}
                       <img
                         src="/medias/right.png"

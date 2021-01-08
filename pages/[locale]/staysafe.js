@@ -13,6 +13,9 @@ class StaySafe extends React.Component {
   }
 
   componentDidMount() {
+		window.analytics.page({
+			name: "StaySafe",
+		})
   }
 
 	openTwake(){
