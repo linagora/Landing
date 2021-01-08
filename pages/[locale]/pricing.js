@@ -94,7 +94,7 @@ const Pricing = (props) => {
                         </div>
                       </div>
                       <a
-                        href="https://app.twakeapp.com"
+                        href="https://beta.twake.app"
                         className="btn btn-purple"
                         style={{ width: "100%", padding: "6px 16px" }}
                       >
