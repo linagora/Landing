@@ -166,6 +166,12 @@ const Footer = ({ t, getLang }) => {
                 >
                   {t({ router: router }, "legals_tos")}
                 </a>
+                <a
+                  className="linkFooter"
+                  href={"/" + getLang({ router: router }) + "/" + "documents/presskit"}
+                >
+                  {t({ router: router }, "presskit")}
+                </a>
 								{
 	                /*<a
 	                  className="linkFooter"

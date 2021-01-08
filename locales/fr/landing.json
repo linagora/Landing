@@ -10,7 +10,7 @@
   "allinone" : "Une solution tout-en-un",
   "allinone_desc" : "Une solution tout-en-un pour une collaboration plus forte dans vos équipes. Twake c'est une meilleure intégration entre vos outils, un seul lieu pour vos données et une vue d'ensemble pour vos projets.<br/><br/>Démarrez votre projet maintenant avec une solution de messagerie, vidéo-conférence, partage de fichiers, calendrier partagé, gestionnaire de tâches et bien plus encore grâce à l'intégration de services externes.",
   "collaborators" : "Parfait pour le télétravail et les projets multi-équipes",
-  "collaborators_desc" : "Twake vous permet de travailler facilement avec vos clients, fournisseurs et autres partenaires grâce à sa fonctionnalité d'utilisateurs externes.<br/><br/>Invitez des collaborateurs externes à des chaînes de discussions spécialisées pour controler l'information dans votre projet. Les collaborateurs externes sont gratuit !",
+  "collaborators_desc" : "Twake vous permet de travailler facilement avec vos clients, fournisseurs et autres partenaires grâce à sa fonctionnalité d'utilisateurs externes.<br/><br/>Invitez des collaborateurs externes à des chaînes de discussions spécialisées pour controler l'information dans votre projet. Les fonctionnalités de collaborateurs externes sont disponibles !",
   "struturate" : "Structurez vos projets avec les espaces de travail. Créez un espace pour chaque projet afin de mieux segmenter votre travail et ainsi traiter plus facilement les informations.",
   "startForFree" : "Démarrez gratuitement",
   "startProject" : "Lancez votre projet",
@@ -81,5 +81,15 @@
   "webApp" : "Web App",
   "desktopApp" : "Desktop App",
   "downloadTitle" : "Téléchargez Twake",
-  "downloadSubtitle" : "Utilisez Twake depuis notre application de bureau optimisée et lancez l’application directement depuis votre bureau"
+  "downloadSubtitle" : "Utilisez Twake depuis notre application de bureau optimisée et lancez l’application directement depuis votre bureau",
+
+
+
+		"staysafe-title" : "Restez chez vous et travaillez en sécurité",
+		"staysafe-subtitle" : "Twake encourage la distanciation sociale par le télétravail. Connectez-vous pour profiter de notre offre gratuite pendant 1 mois",
+		"staysafe-signInForFree" : "S'inscrire gratuitement",
+		"staysafe-helptitle" : "Aider à aplatir la courbe",
+		"staysafe-helpsubtitle" : "Le travail à domicile limite considérablement la propagation du virus. Faites votre part, travaillez à distance",
+		"staySafe-agreement" : "J'accepte de m'isoler et de profiter gratuitement de Twake"
+
 }
