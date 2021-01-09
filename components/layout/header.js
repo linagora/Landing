@@ -12,6 +12,7 @@ const Header = ({ t, scrolled, getLang }) => {
       bg="light"
       className={"navbar " + (scrolled ? "navBarScrolled" : "")}
     >
+      [Beta Banner] -  Create me here !!
       <div className="container">
         <Navbar.Brand className="navbar-brand" href={"/"}>
           <img

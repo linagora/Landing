@@ -3,12 +3,25 @@ import Head from "next/head";
 import Layout from "../../components/layout/layout";
 import { i18n, withTranslation } from "../../i18n";
 import { Fork, Star } from 'react-github-buttons';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from "react-bootstrap/Card";
+import TasksPlayer from "../../components/reactTasksPlayer";
+import ChannelsPlayer from "../../components/reactChannelsPlayer";
+import CalendarPlayer from "../../components/reactCalendarPlayer";
+import FilePlayer from "../../components/reactFilePlayer";
+import { Modal } from "react-responsive-modal";
+import { Tabs, Tab, Panel } from '@bumaga/tabs' 
 
+const styles = {
+  fontFamily: "sans-serif",
+  textAlign: "center"
+};
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      carousselImg: 0
+      carousselImg: 0,
+      open: false
     };
   }
 
@@ -38,8 +51,19 @@ class Home extends React.Component {
     }
     return ret;
   }
+  onOpenModal = () => {
+    this.setState(prevState => ({
+      open: !prevState.open
+    }));
+  };
+
+  // onCloseModal = () => {
+  //   this.setState({ open: false });
+  // };
 
   render() {
+    const { open } = this.state;
+
     return (
       <Layout page="home">
         <div
@@ -147,6 +171,112 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
+          [New Bloc] - Create me here!!
+          <section>
+            <div className="container">
+              <div className="row rowWithScreen">
+                <div className="col-lg-6">
+                  <div className="colTitle">
+                    <h1 className="title ">
+                      {this.props.t(this.props, "team-collaboration")}
+                    </h1>
+                    <div className="subtitle ">
+                      {this.props.t(this.props, "team-collaboration-desc")}
+                    </div>
+                    ay ay ay!!
+                    <Tabs>
+                      <div>
+                        <Accordion defaultActiveKey="0">
+                          <Tab>
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="0">
+                                <h4>
+                                  {this.props.t(this.props, "tasks-accordion-title")}
+                                </h4>
+                                <button onClick={this.onOpenModal}>Play Video </button>
+                                <TasksPlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                                
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="0">
+                                <Card.Body>{this.props.t(this.props, "tasks-accordion-title-desc")}</Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                            </Tab>
+                            <Tab>
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="1">
+                                <h4>
+                                  {this.props.t(this.props, "channels-accordion-title")}
+                                </h4>
+
+                                <button onClick={this.onOpenModal}>Play Video </button>
+                                <ChannelsPlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="1">
+                                <Card.Body>{this.props.t(this.props, "channels-accordion-title-desc")}</Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                            </Tab>
+                            <Tab>
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="2">
+                                <h4>
+                                  {this.props.t(this.props, "calendar-accordion-title")}
+                                </h4>
+
+                                <button onClick={this.onOpenModal}>Play Video </button>
+                                <CalendarPlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="2">
+                                <Card.Body>{this.props.t(this.props, "calendar-accordion-title-desc")}</Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                            </Tab>
+                            <Tab>
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="3">
+                                <h4>
+                                  {this.props.t(this.props, "file-storage-accordion-title")}
+                                </h4>
+
+                                <button onClick={this.onOpenModal}>Play Video </button>
+                                <FilePlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="3">
+                                <Card.Body>{this.props.t(this.props, "file-storage-accordion-title-desc")}</Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                          </Tab>
+                        </Accordion>
+                      </div>
+                      <div>
+                      <Panel>
+                          <img
+                          src="/medias/features/app_demo_1.jpg"
+                          alt="Twake Messages"
+                          />
+                      </Panel>
+                      <Panel><p><img
+                        src="/medias/features/app_demo_2.jpg"
+                        alt="Twake Messages"
+                      /></p></Panel>
+                      <Panel><p><img
+                        src="/medias/features/app_demo_3.jpg"
+                        alt="Twake Messages"
+                      /></p></Panel>
+                      <Panel><p><img
+                        src="/medias/features/app_demo_4.jpg"
+                        alt="Twake Messages"
+                      /></p></Panel>
+                      </div>
+                    </Tabs>
+                    yooooooooooooo
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          [New Bloc] - Ends Here!!
           <section className="desktop-60-top">
             <div className="container">
               <div className="row">
