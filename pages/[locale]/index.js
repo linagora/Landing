@@ -63,7 +63,8 @@ class Home extends React.Component {
                       {this.props.t(this.props, "ces-title")}
                     </h1>
                     <div className="subtitle ">
-                      {this.props.t(this.props, "ces-subtitle")}
+                      {this.props.t(this.props, "ces-subtitle")}<br/>
+                      {this.props.t(this.props, "ces-subtitle2")}
                     </div>
                     <div className="btnBloc">
                       <a

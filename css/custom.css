@@ -741,9 +741,6 @@ h2 {
 	text-align: center;
 	border:solid 1px var(--grey_light);
 }
-.pricingTable tr{
-	line-height: 46px;
-}
 .pricingTable th{
 	width:180px;
 	text-align: center;
@@ -754,8 +751,12 @@ h2 {
 }
 .pricingTable tr .featureName{
 	width:250px;
-	text-align: left;
+  text-align: left;
 }
+.pricingTable tr td{
+  padding : 16px 16px;
+}
+
 .emptyTr{
 	border:none;
 }

@@ -11,7 +11,10 @@ const Pricing = (props) => {
 
 	let plans = {
 		saas : [
+			"free",
 			"standard",
+			"premium",
+			"entreprise"
 		],
 		selhosted :[
 			"community",
@@ -24,39 +27,48 @@ const Pricing = (props) => {
 	let features = {
 		saas : [
 			{
+				title: "Pricing",
+				features : [
+					{
+						name : "",
+						available : [props.t(props,"free"),'<span style="text-decoration:line-through;margin-right:8px">4.19 €</span>2.99 €',"10.39 €","Contact Sales"]
+					}
+				],
+			},
+			{
 				title : "features",
 				features : [
 					{
 						name : "chat",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "drive",
-						available : ["6 GB " +props.t(props,"peruser"),"11 GB "+props.t(props,"peruser"),props.t(props,"unlimited")]
+						available : ["6 GB " +props.t(props,"peruser"),"11 GB "+props.t(props,"peruser"),"25 GB " +props.t(props,"peruser"),"1 TB " +props.t(props,"peruser")]
 					},
 					{
 						name : "calendar",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "task",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "video",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 					{
 						name : "office",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 					{
 						name : "guest",
-						available : [false,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "email",
-						available : ["",props.t(props,"comingsoon"),props.t(props,"comingsoon")],
+						available : ["",props.t(props,"comingsoon"),true,true],
 					},
 				],
 			},
@@ -65,48 +77,48 @@ const Pricing = (props) => {
 				features : [
 					{
 						name : "strongpasswordpolicy",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 					{
 						name : "2fa",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),props.t(props,"comingsoon"),props.t(props,"comingsoon")],
 					},
 					{
 						name : "ssoauthentification",
-						available : [false,false,true],
+						available : [false,false,true,true],
 					},
 					{
 						name : "dataeurope",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "cloudact",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "gdpr",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "tsl",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "encryption",
-						available : [false,true,true],
+						available : [false,true,true,true],
 					},
 					{
 						name : "fileEncryption",
-						available : [false,true,true],
+						available : [true,true,true,true],
 
 					},
 					{
 						name : "advancedSecurity",
-						available : [false,true,true],
+						available : [false,true,true,true],
 					},
 					{
 						name : "deviceManagement",
-						available : [false,true,true],
+						available : [false,true,true,true],
 					}
 				]
 			},
@@ -115,27 +127,27 @@ const Pricing = (props) => {
 				features : [
 					{
 						name : "chat",
-						available : [true,true,true],
+						available : [false,true,true,true],
 					},
 					{
 						name : "email",
-						available : [true,true,true],
+						available : [false,true,true,true],
 					},
 					{
 						name : "phone",
-						available : [true,true,true],
+						available : [false,true,true,true],
 					},
 					{
 						name : "inPerson",
-						available : [false,true,true],
+						available : [false,true,true,true],
 					},
 					{
 						name : "99uptime",
-						available : [false,true,true],
+						available : [false,true,true,true],
 					},
 					{
 						name : "accountTeam",
-						available : [false,false,true],
+						available : [false,false,false,true],
 					}
 				]
 			},
@@ -144,15 +156,15 @@ const Pricing = (props) => {
 				features : [
 					{
 						name : "web",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "mobile",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					},
 					{
 						name : "desktop",
-						available : [true,true,true],
+						available : [true,true,true,true],
 					}
 				]
 			},
@@ -427,7 +439,7 @@ const Pricing = (props) => {
 						<div className="divider"></div>
 						<div className="dividertag">Early Bird</div>
 						<div className="pricingAmount"><span className="lined">4.19€</span>2.99€<span style={{fontWeight:"400",fontSize:"14px"}}>{props.t(props,"byUserByMonth")}</span></div>
-						<div className="feature"><img src="/medias/check-alt-green.png" alt=""/><div className="nameFeature">{props.t(props,"cesoffer.av1")}</div></div>
+						{/* <div className="feature"><img src="/medias/check-alt-green.png" alt=""/><div className="nameFeature">{props.t(props,"cesoffer.av1")}</div></div> */}
 						<div className="feature"><img src="/medias/check-alt-green.png" alt=""/><div className="nameFeature">{props.t(props,"cesoffer.av2")}</div></div>
 						<div className="feature"><img src="/medias/check-alt-green.png" alt=""/><div className="nameFeature">{props.t(props,"cesoffer.av3")}</div></div>
 						<div className="feature"><img src="/medias/check-alt-green.png" alt=""/><div className="nameFeature">{props.t(props,"cesoffer.av4")}</div></div>
@@ -456,7 +468,7 @@ const Pricing = (props) => {
 							</div>
 						</div>
 						<div className="row" style={{marginTop:"32px"}}>
-							<div className="offset-lg-3 col-lg-6 col-md-12 table-responsive">
+							<div className="table-responsive">
 								<table className="pricingTable table">
 									<thead>
 										<tr>
@@ -479,16 +491,18 @@ const Pricing = (props) => {
 														<tr className="tfeature">
 															<td className="featureName">{props.t(props,feat.name)}</td>
 															{
-																<td>{
-																	(feat.available[1].length && feat.available[1].length)>0?
-																	feat.available[1]
-																	:
-																	feat.available[1]==true
-																		?
-																			<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />
+																feat.available.map(available =>(
+																	<td style={{verticalAlign:"middle"}}>{
+																		(available.length && available.length)>0?
+																			<span dangerouslySetInnerHTML={{__html:available}}></span>
 																		:
-																			""
-																}</td>
+																			available==true
+																			?
+																				<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />
+																			:
+																				""
+																	}</td>
+																))
 															}
 														</tr>
 													)
