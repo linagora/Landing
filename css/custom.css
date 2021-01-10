@@ -2574,7 +2574,7 @@ a.demoTitle:hover {
 }
 
 .ces .divider{
-  margin:12px -24px;  
+  margin:12px -24px;
   width: calc(100% + 48px);
   height:1px;
   background: #eaeaea;
@@ -2603,4 +2603,16 @@ a.demoTitle:hover {
 }
 .ces .discoverLink{
   margin:8px 0px;
+}
+
+
+.playCircle{
+	position: absolute;
+	width:100px;
+	height: 100px;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin : auto;
 }

@@ -19,9 +19,9 @@ class Home extends React.Component {
 			category: "Home",
 			name: "Home",
 		})
-    setInterval(() => {
-      this.setState({ carousselImg: (this.state.carousselImg + 1) % 4 });
-    }, 5000);
+    // setInterval(() => {
+    //   this.setState({ carousselImg: (this.state.carousselImg + 1) % 4 });
+    // }, 5000);
   }
 
   renderNote(review) {
@@ -58,12 +58,12 @@ class Home extends React.Component {
               <div className="row rowWithScreen">
                 <div className="col-lg-6">
                   <div className="colTitle">
-										<ModalVideo channel='youtube' autoplay isOpen={this.state.isOpen} videoId="RzzosDMSl10" onClose={() => this.setState({isOpen:false})} />
+										<ModalVideo channel='youtube' autoplay isOpen={this.state.isOpen} videoId="yECB_mdmgeU" onClose={() => this.setState({isOpen:false})} />
                     <h1 className="title ">
-                      {this.props.t(this.props, "title")}
+                      {this.props.t(this.props, "ces-title")}
                     </h1>
                     <div className="subtitle ">
-                      {this.props.t(this.props, "subtitle")}
+                      {this.props.t(this.props, "ces-subtitle")}
                     </div>
                     <div className="btnBloc">
                       <a
@@ -78,7 +78,6 @@ class Home extends React.Component {
                       >
                         {this.props.t(this.props, "tryForFree")}
                       </a>
-		      {/*
                       <a
                         className="discoverLink"
                         style={{ marginLeft: "16px",fontWeight:"500"}}
@@ -92,7 +91,6 @@ class Home extends React.Component {
                           alt="download"
                         />
                       </a>
-		      */}
                     </div>
                     <div className="customers d-none d-lg-block">
 											<Star style={{display : "inline-block"}} owner='TwakeApp' repo='Twake' />
@@ -104,11 +102,18 @@ class Home extends React.Component {
                 <div className="col-lg-6">
                   <div style={{ position: "relative" }}>
                     <img
-                      className="imgScreen placeholderImage"
-                      src="/medias/features/app_demo_1.jpg"
+                      className="imgScreen placeholderImage carousselImgViewed"
+                      src="/medias/whatistwake.png"
                       alt="Twake Messages"
+											onClick={()=>this.setState({isOpen : true})}
                     />
-                    <img
+
+                    {/*
+											<img
+												className="playCircle"
+												src="/medias/play.svg"
+												/>
+											<img
                       className={
                         "imgScreen caroussel " +
                         (this.state.carousselImg == 0
@@ -147,7 +152,7 @@ class Home extends React.Component {
                       }
                       src="/medias/features/app_demo_1.jpg"
                       alt="Twake Messages"
-                    />
+                    />*/}
                   </div>
                 </div>
                 <div className="col-lg-6 d-visible d-lg-none">
