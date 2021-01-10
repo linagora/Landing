@@ -4,6 +4,7 @@
   --secondary: #182952;
   --primary_background: #f3f2ff;
   --green: #3dcc97;
+  --greenNature: #7af96b;
   --white: #ffffff;
   --black: #444444;
   --red: #ff5154;
@@ -51,6 +52,10 @@ a {
 a:hover {
   text-decoration: underline var(--primary);
   color: unset;
+}
+a.discoverLink:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 .input{
 	border-radius: 3px;
@@ -795,7 +800,6 @@ h2 {
   box-shadow: 0 8px 16px 0 rgba(183, 183, 183, 0.15);
   background-color: var(--white);
   padding: 24px;
-  margin: 20px;
 	flex: 1;
 }
 .planName {
@@ -2517,4 +2521,86 @@ a.demoTitle:hover {
 }
 .staySafe .colTitle{
 	max-width: 475px !important;
+}
+
+
+/* gtfg */
+
+#landing .gtfgHeaderLink{
+	text-decoration: none;
+}
+
+#landing .gtfgHeader{
+	margin-top: 32px;
+	font-size: 24px;
+	text-transform: capitalize;
+	font-weight: bold;
+	color : var(--greenNature);
+}
+
+#landing .gt4gCardContainer{
+	padding : 12px;
+	display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#landing .gt4gCard{
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.08);
+	border-radius: 4px;
+	background: var(--white);
+	padding : 24px;
+  height: 100%;
+}
+#landing .imgGtfg{
+	width: 100px;
+	margin:auto;
+	display: block;
+}
+#landing .titleCard{
+	font-weight: bold;
+	margin-bottom: 4px;
+	margin-top:8px;
+}
+
+.ces .pricingBlock{
+  padding: 24px;
+}
+.ces .titlePlan{
+  font-size:20px;
+  font-weight: bold;  text-align:left;
+  margin:0px;
+  margin-top:-4px;
+  margin-bottom: 4px;
+}
+
+.ces .divider{
+  margin:12px -24px;  
+  width: calc(100% + 48px);
+  height:1px;
+  background: #eaeaea;
+}
+
+.ces .dividertag{
+  margin-top : -21px;
+  font-size:13px;
+  font-weight:800;
+  color:white;
+  background-color : var(--primary);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.ces .pricingAmount{
+  margin : 12px 0px;
+  text-align : left;
+  font-size: 48px;
+}
+.ces .lined{
+  font-weight: 500;
+  font-size : 48px;
+  margin-right: 16px;
+  text-decoration: line-through black;
+  color: var(--grey_dark);
+}
+.ces .discoverLink{
+  margin:8px 0px;
 }

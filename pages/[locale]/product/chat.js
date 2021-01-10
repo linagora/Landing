@@ -12,8 +12,12 @@ class ChatProduct extends React.Component {
     super(props);
     this.state = {};
   }
-  componentDidMount() {}
-
+  componentDidMount() {
+		window.analytics.page({
+			name: "Chat",
+			category: "Product",
+		});
+	}
   render() {
     return (
       <Layout page="productChat">

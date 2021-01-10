@@ -21,9 +21,12 @@ const Layout = props => {
   const version = "1.2.000";
 	return (
 		<div className="layout" id="landing">
-			<Head>
+					<Head>
+			<script type="text/javascript" dangerouslySetInnerHTML={{__html:`!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
+			analytics.load("LSC04C9iGON9MxXOrExQtsrtRZerSy5k");
+			window.analytics.page();
+			}}();`}}/>
 			<script type="text/javascript" dangerouslySetInnerHTML={{__html:`window.$crisp=[];window.CRISP_WEBSITE_ID="9ef1628b-1730-4044-b779-72ca48893161";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`}}></script>
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121796059-2"></script>
 			<script dangerouslySetInnerHTML={{__html:`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-121796059-2');`}}></script>
 			<script type="text/javascript" dangerouslySetInnerHTML={{__html:`window.ltwAsyncInit = function(){init_multiplegl('https://gl.hostcg.com/',[['https://gl.hostcg.com/','2034','hh0r8vrr7i']]);};`}}></script>
 			<script type="text/javascript" src="https://gl.hostcg.com/js/genlead.js" defer></script>
@@ -55,14 +58,6 @@ const Layout = props => {
 					href={"../../../css/mobile.min.css?v=" + version}
 				/>
 				<script src={"/js/custom.min.js?v=" + version}></script>
-				// Start of HubSpot Embed Code
-				<script
-					type="text/javascript"
-					id="hs-script-loader"
-					async
-					defer
-					src="//js.hs-scripts.com/5865592.js"
-				></script>
 				// Facebook Pixel Code
 				<noscript>
 					<img
