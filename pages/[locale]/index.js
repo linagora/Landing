@@ -58,7 +58,7 @@ class Home extends React.Component {
               <div className="row rowWithScreen">
                 <div className="col-lg-6">
                   <div className="colTitle">
-										<ModalVideo channel='youtube' autoplay isOpen={this.state.isOpen} videoId="yECB_mdmgeU" onClose={() => this.setState({isOpen:false})} />
+										<ModalVideo channel='youtube' autoplay isOpen={this.state.isOpen} videoId="WjWz5uaupXM" onClose={() => this.setState({isOpen:false})} />
                     <h1 className="title ">
                       {this.props.t(this.props, "ces-title")}
                     </h1>
