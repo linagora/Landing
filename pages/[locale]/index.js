@@ -57,10 +57,6 @@ class Home extends React.Component {
     }));
   };
 
-  // onCloseModal = () => {
-  //   this.setState({ open: false });
-  // };
-
   render() {
     const { open } = this.state;
 
@@ -169,29 +165,28 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
-          [New Bloc] - Create me here!!
           <section>
             <div className="container">
               <div className="row rowWithScreen">
-                <div className="col-lg-6">
-                  <div className="colTitle">
+                <div>
+                  <div className="colTitle col-lg-6">
                     <h1 className="title ">
                       {this.props.t(this.props, "team-collaboration")}
                     </h1>
                     <div className="subtitle ">
                       {this.props.t(this.props, "team-collaboration-desc")}
                     </div>
-                    ay ay ay!!
-                    <Tabs>
-                      <div>
+                  </div>
+                  <Tabs>
+                    <div className="col-lg-4 pull-left">
                         <Accordion defaultActiveKey="0">
                           <Tab>
                             <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
-                                <h4>
+                                <h4 className="pull-left">
                                   {this.props.t(this.props, "tasks-accordion-title")}
                                 </h4>
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
                                 <TasksPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                                 
                               </Accordion.Toggle>
@@ -203,11 +198,11 @@ class Home extends React.Component {
                             <Tab>
                             <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="1">
-                                <h4>
+                              <h4 className="pull-left">
                                   {this.props.t(this.props, "channels-accordion-title")}
                                 </h4>
 
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
                                 <ChannelsPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="1">
@@ -218,11 +213,11 @@ class Home extends React.Component {
                             <Tab>
                             <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="2">
-                                <h4>
+                              <h4 className="pull-left">
                                   {this.props.t(this.props, "calendar-accordion-title")}
                                 </h4>
 
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
                                 <CalendarPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="2">
@@ -233,11 +228,11 @@ class Home extends React.Component {
                             <Tab>
                             <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="3">
-                                <h4>
+                              <h4 className="pull-left">
                                   {this.props.t(this.props, "file-storage-accordion-title")}
                                 </h4>
 
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
                                 <FilePlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="3">
@@ -246,8 +241,8 @@ class Home extends React.Component {
                             </Card>
                           </Tab>
                         </Accordion>
-                      </div>
-                      <div>
+                    </div>
+                    <div className="col-lg-6 pull-right  pics-tabs">
                       <Panel>
                           <img
                           src="/medias/features/app_demo_1.jpg"
@@ -266,15 +261,12 @@ class Home extends React.Component {
                         src="/medias/features/app_demo_4.jpg"
                         alt="Twake Messages"
                       /></p></Panel>
-                      </div>
-                    </Tabs>
-                    yooooooooooooo
-                  </div>
+                    </div>
+                  </Tabs>
                 </div>
               </div>
             </div>
           </section>
-          [New Bloc] - Ends Here!!
           <section className="desktop-60-top">
             <div className="container">
               <div className="row">

@@ -2518,3 +2518,32 @@ a.demoTitle:hover {
 .staySafe .colTitle{
 	max-width: 475px !important;
 }
+
+.pull-right{
+  float: right;
+}
+.pull-left{
+  float: left;
+}
+
+.card {
+    margin: 50px 0px;
+    border: none;
+}
+
+.card-header {
+  border: none;
+  background-color: #b3dcf2;
+}
+
+.pics-tabs{
+  top: -100px;
+}
+
+.collapse.show {
+   background-color: #b3dcf2;
+}
+
+.more-videos {
+  color: #918bfc;
+}
