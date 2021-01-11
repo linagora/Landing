@@ -108,7 +108,7 @@ class Home extends React.Component {
                 <div className="col-lg-6">
                   <div style={{ position: "relative" }}>
                     <img
-                      className="imgScreen placeholderImage carousselImgViewed"
+                      className="imgScreen placeholderImage carousselImgViewed overview"
                       src="/medias/whatistwake.png"
                       alt="Twake Messages"
 											onClick={()=>this.setState({isOpen : true})}

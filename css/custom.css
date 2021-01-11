@@ -2623,3 +2623,16 @@ a.demoTitle:hover {
 	right:0;
 	margin : auto;
 }
+
+
+.imgScreen.overview{
+  transition: transform 0.1s, opacity 0.1s;
+  transform: scale(1);
+  opacity: 1;
+}
+.imgScreen.overview:hover{
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(1.02);
+  opacity: 0.95;
+}
