@@ -69,7 +69,7 @@ class Home extends React.Component {
                     <div className="btnBloc">
                       <a
                         id="submitFormButtonForCapterra"
-                        href="https://beta.twake.app"
+                        href="https://console.twake.app/signup?plan=early-bird-offer-free-per-unit"
                         className="btn btn-purple"
 												onClick={()=>{
 													analytics.track('TryForFree_click',{
@@ -191,7 +191,7 @@ class Home extends React.Component {
                     }}
                   ></div>
                   <div className="startFree">
-                  <a href="https://beta.twake.app"
+                  <a href="https://console.twake.app/signup?plan=early-bird-offer-free-per-unit"
 										onClick={()=>{
 											analytics.track('TryForFree_click',{
 												from : "tryforfree1_home"
@@ -247,7 +247,7 @@ class Home extends React.Component {
                     }}
                   ></div>
                   <div className="startFree">
-                    <a href="https://beta.twake.app"
+                    <a href="https://console.twake.app/signup?plan=early-bird-offer-free-per-unit"
                         onClick={()=>{
                           analytics.track('TryForFree_click',{
                             from : "tryforfree2_home"

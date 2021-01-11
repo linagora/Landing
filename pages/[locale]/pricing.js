@@ -413,7 +413,7 @@ const Pricing = (props) => {
 							{props.t(props, "cesoffer.join3")}
 						</div>
 						<a
-						href="http://beta.twake.app/"
+						href="https://console.twake.app/signup?plan=early-bird-offer-free-per-unit"
 						className="discoverLink"
 						style={{ fontWeight:"500"}}
 						onClick = {()=>{
@@ -444,7 +444,7 @@ const Pricing = (props) => {
 						<div className="feature"><img src="/medias/check-alt-green.png" alt=""/><div className="nameFeature">{props.t(props,"cesoffer.av3")}</div></div>
 						<div className="feature"><img src="/medias/check-alt-green.png" alt=""/><div className="nameFeature">{props.t(props,"cesoffer.av4")}</div></div>
 						<a
-							href="http://beta.twake.app"
+							href="https://console.twake.app/signup?plan=early-bird-offer-free-per-unit"
 							className="btn btn-purple"
 							style={{ width: "100%", padding: "8px 8px",marginTop:"24px" }}
 							onClick = {()=>{
