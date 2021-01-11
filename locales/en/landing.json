@@ -68,7 +68,7 @@
   "security_encrypted_data": "Encrypted data",
   "security_encrypted_data_desc": "Our databases are encrypted and so are your files, so that only you decide who can access your data.",
   "security_location": "Located in Europe",
-  "security_location_desc": "Your files and data are stored entirely in Europe! Twake complies with GDRP regulations.",
+  "security_location_desc": "Your files and data are stored entirely in Europe! Twake complies with GDPR regulations.",
   "security_transfers": "Secure transfers",
   "security_transfers_desc": "HTTPS/SSL and end-to-end websockets communications enabled.",
   "security_onpremise": "On-premise offers",
