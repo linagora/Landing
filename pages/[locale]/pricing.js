@@ -31,7 +31,7 @@ const Pricing = (props) => {
 				features : [
 					{
 						name : "",
-						available : [props.t(props,"free"),'<span style="text-decoration:line-through;margin-right:8px">4.19 €</span>2.99 €',"10.39 €","Contact Sales"]
+						available : [props.t(props,"free"),'<span style="text-decoration:line-through;margin-right:8px">4.19 €</span>2.99 €',"10.39 €",props.t(props,"contactSale")]
 					}
 				],
 			},
