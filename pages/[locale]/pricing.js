@@ -27,7 +27,7 @@ const Pricing = (props) => {
 	let features = {
 		saas : [
 			{
-				title: "Pricing",
+				title: "pricing",
 				features : [
 					{
 						name : "",

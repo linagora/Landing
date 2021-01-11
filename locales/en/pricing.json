@@ -4,13 +4,10 @@
    "monthly" : "Monthly",
 	 "anual" : "Annual",
 	 "selfhostedCommunautySubTitle": "For teams that are ready to centralize their communication.",
-   "standard" : "Standard",
 	 "saasStandardSubTitle" : "For teams that are ready to control and centralize their communication.",
 	 "selfhostedStandardSubTitle" : "For businesses ready to step up their team communication and improve productivity.",
-	 "premium" : "Premium",
 	 "saasPremiumSubTitle" : "For businesses ready to step up their team communication and improve productivity.",
 	 "selfhostedPremiumSubTitle" : "For business that need to access more features.",
-	 "entreprise" : "Entreprise",
 	 "saasEntrepriseSubTitle" : "For businesses needing high-level scalability and management.",
 	 "selfhostedEntrepriseSubTitle" : "For businesses needing high-level scalability, management and unlimited features.",
 	 "contactSale" : "Contact us",
@@ -50,7 +47,7 @@
 	 "premium" : "Premium",
 	 "entreprise" : "Entreprise",
 
-
+	 "pricing" : "Pricing",
 	 "features" : "Features",
 	 "privacy" : "Privacy",
 	 "access" : "Access",
@@ -114,6 +111,7 @@
 
 	 "onprem" : "On-premises",
 	 "privatehosted" : "Private Hosted",
+
 
 	"ces.dealrefuse" : "We have a deal that you can't refuse",
 	 "cesoffer.joinus" : "Join us",

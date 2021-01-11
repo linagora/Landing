@@ -82,7 +82,12 @@ class Home extends React.Component {
                       <a
                         className="discoverLink"
                         style={{ marginLeft: "16px",fontWeight:"500"}}
-												onClick={()=>this.setState({isOpen:true})}
+												onClick={()=>{
+                          this.setState({isOpen:true})
+                          analytics.track('LandingVideo_click',{
+                            from : "home"
+                          });
+                        }}
                       >
                         {this.props.t(this.props, "discoverTwake")}
 												<img

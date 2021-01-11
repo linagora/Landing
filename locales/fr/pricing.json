@@ -69,8 +69,8 @@
   "cloudact": "Non soumis aux actes Cloud et aux actes Patriot",
   "gdpr": "Conformité GDPR",
   "tsl": "Chiffrement TSL 1.2",
-  "encryption": "Cryptage des données au repos et en transit",
-  "fileEncryption": "Cryptage des fichiers",
+  "encryption": "Chiffrage des données au repos et en transit",
+  "fileEncryption": "Chiffrage des fichiers",
   "e2e": "Chiffrement End-to-End",
   "advancedSecurity": "Sécurité avancé",
   "deviceManagement": "Gestion d'appareils",
@@ -100,6 +100,16 @@
   "upgrade": "On-Call Upgrade Assistance",
   "onprem": "On-premises",
   "privatehosted": "Hébergement privé",
+
+  "pricing" : "Tarifs",
+  "features" : "Fonctionnalités",
+  "privacy" : "Confidentialité",
+  "access" : "Accès",
+  "integration" : "Integrations",
+  "resources" : "Resources",
+  "onboarding" : "Accompagnement",
+  "deployment" : "Déployement",
+
 
   "ces.dealrefuse" : "Nous avons une offre que vous ne pouvez pas refuser",
   "cesoffer.joinus" : "Nous rejoindre",

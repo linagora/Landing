@@ -20,6 +20,8 @@
     }
     #pricing .nameFeature{
         font-size: 15px;
+        flex:1;
+        text-align: left;
     }
     #pricing .col-lg-12{
         padding-left:0px!important;

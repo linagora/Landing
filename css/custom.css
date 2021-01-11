@@ -853,14 +853,20 @@ h2 {
   flex: 1;
 }
 .feature {
+  display:flex;
   margin: 6px 0px;
 }
 .feature img {
   width: 12px;
+  height: 12px;
   margin-right: 8px;
+  margin-top: 6px;
 }
-.nameFeature {
+.nameFeature{
   display: inline-block;
+  font-size: 15px;
+  flex:1;
+  text-align: left;
 }
 .faq {
   margin: 0 40px;
