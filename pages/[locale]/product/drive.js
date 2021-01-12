@@ -6,7 +6,14 @@ import Layout from "../../../components/layout/layout";
 import { withTranslation } from "../../../i18n";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-const Drive = props => (
+const Drive = props => {
+  React.useEffect(() => {
+		window.analytics.page({
+			name: "Drive",
+			category: "Product",
+		});
+  });
+  return(
   <Layout page="productDrive">
     <div className="container-fluid" id="product">
       <section className="">
@@ -189,8 +196,8 @@ const Drive = props => (
       </section>
     </div>
   </Layout>
-);
-
+  );
+}
 Drive.getInitialProps = async () => ({
   namespacesRequired: ["product"],
   locale: "en"

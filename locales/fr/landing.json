@@ -3,6 +3,7 @@
   "subtitle" : "Twake couvre l'ensemble de vos besoins d'organisation via une seule plateforme. Plus besoin de déployer 5 outils différents simultanément.",
   "tryForFree" : "Utilisez gratuitement",
   "download" : "Télécharger",
+	"discoverTwake" : "Découvrir Twake",
   "downloadFor" : "Pour",
   "goFar" : "Allez plus loin avec Twake",
   "adaptedSolution1" : "Une solution adaptée ",
@@ -75,6 +76,16 @@
   "opensource" : "open-source",
   "opensourceSub" : "Twake est open source",
   "opensourceDescription" : "Nous sommes fortement engagés dans l'open source. Twake est une plateforme collaborative éthique, ouverte et transparente. Le code source de Twake est disponible sur github. Le résultat de cette démarche est un produit qui surpasse les logiciels propriétaires et offre plus de valeur à nos utilisateurs.  Consultez notre code et contribuez à notre communauté sur github.",
+	"goodtech4good" : "#goodtech4good",
+	"goodtech4goodSub" : "Nous construisons des technologies pour le bien de tous !",
+	"gt4g1Title" : "Développement durable",
+	"gt4g1Description" : "Contribuer aux objectifs de développement durable.",
+	"gt4g2Title" : "Certification",
+	"gt4g2Description" : "Travailler à l'obtention d'une certification B-Corp. ",
+	"gt4g3Title" : "Communauté",
+	"gt4g3Description" : "Engager, responsabiliser et soutenir globalement la communauté Tech for Good.",
+	"gt4g4Title" : "Négatif en carbone",
+	"gt4g4Description" : "Devenir négatif en carbone d'ici 2025 et supprimer les émissions historiques de carbone d'ici 2030",
   "available" : "Disponible",
   "available1" : "partout",
   "mobileApp" : "Mobile App",
@@ -105,6 +116,9 @@
     "more-on-tasks": "Plus sur les tâches",
     "more-on-channels": "Plus sur les channels",
     "more-on-calendar": "Plus sur le calendar",
-    "more-on-storage": "Plus sur le stockage"
+    "more-on-storage": "Plus sur le stockage",
 
-}
+		"ces-title" : "Offre à vie pour notre lancement !",
+    "ces-subtitle" : "Les 10 000 premières entreprises à s'inscrire bénéficieront de 6 mois d'utilisation gratuite, et d'une réduction à vie après 6 mois.",  
+    "ces-subtitle2" : "Rejoignez la famille Twake !"    
+  }

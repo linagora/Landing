@@ -39,11 +39,16 @@ const Header = ({ t, scrolled, getLang }) => {
             </Nav.Item>
             <Nav.Item className="nav-item">
               <Nav.Link
-                className="nav-link"
-                href={"/" + getLang({ router: router }) + "/" + "pricing"}
-              >
-                {t({ router: router }, "pricing")}
-              </Nav.Link>
+                  className="nav-link"
+                  onClick={()=>{
+                    analytics.track('pricingLink_click',{
+                      from : 'header'
+                    });
+                  }}
+                  href={"/" + getLang({ router: router }) + "/" + "pricing"}
+                >
+                  {t({ router: router }, "pricing")}
+                </Nav.Link>
             </Nav.Item>
             <NavDropdown title={t({ router: router }, "community")} id="basic-nav-dropdown">
               <NavDropdown.Item href={"/" + getLang({ router: router }) + "/" + "contribute"}>{t({ router: router }, "contribute")}</NavDropdown.Item>
@@ -52,7 +57,13 @@ const Header = ({ t, scrolled, getLang }) => {
             </NavDropdown>
           </Nav>
           <Nav.Item className="nav-item">
-            <Nav.Link className="nav-link" href="https://beta.twake.app">
+          <Nav.Link className="nav-link"
+							onClick = {()=>{
+										analytics.track('TryForFree_click',{
+											from : "trynow_pricing"
+										});
+									}}
+									href="https://beta.twake.app">
               {t({ router: router }, "connection")}
             </Nav.Link>
           </Nav.Item>

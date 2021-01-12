@@ -4,17 +4,14 @@
    "monthly" : "Monthly",
 	 "anual" : "Annual",
 	 "selfhostedCommunautySubTitle": "For teams that are ready to centralize their communication.",
-   "standard" : "Standard",
 	 "saasStandardSubTitle" : "For teams that are ready to control and centralize their communication.",
 	 "selfhostedStandardSubTitle" : "For businesses ready to step up their team communication and improve productivity.",
-	 "premium" : "Premium",
 	 "saasPremiumSubTitle" : "For businesses ready to step up their team communication and improve productivity.",
 	 "selfhostedPremiumSubTitle" : "For business that need to access more features.",
-	 "entreprise" : "Entreprise",
 	 "saasEntrepriseSubTitle" : "For businesses needing high-level scalability and management.",
 	 "selfhostedEntrepriseSubTitle" : "For businesses needing high-level scalability, management and unlimited features.",
 	 "contactSale" : "Contact us",
-	 "free" : "free",
+	 "free" : "Free",
 	 "tieredPricing" : "Tiered Pricing",
    "mailSupport" : "Email support",
    "useForFree" : "Use for free",
@@ -36,7 +33,7 @@
    "extern" : "Can I invite external users?",
    "externR" : "Of course ! You can invite external users with limited access to one of your chat channels or access to your entire workspace. Your external users are not charged.",
    "onpremise" : "Can I install Twake on my servers?",
-   "onpremiseR" : "We have an on-premise offer, for more information contact us at contact@twakeapp.com or request a demo via the website.",
+   "onpremiseR" : "You can host Twake on your server. Clone our github repository and launch Twake. For more information contact us at contact@twakeapp.com or request a demo via the website.",
    "tryEasy" : "Try Twake now, it's easy!",
    "tryNow" : "Try it now",
 	 "onPremTitle" : "Self-hosted",
@@ -50,7 +47,7 @@
 	 "premium" : "Premium",
 	 "entreprise" : "Entreprise",
 
-
+	 "pricing" : "Pricing",
 	 "features" : "Features",
 	 "privacy" : "Privacy",
 	 "access" : "Access",
@@ -83,6 +80,8 @@
 	 "advancedSecurity" : "Advanced Security",
 	 "deviceManagement" : "Device Management",
 
+	"peruser" : "/ user",
+
 	 "support" : "Support",
 	 "ticket" : "Online ticket Creation",
 	 "phone" : "Phone",
@@ -111,5 +110,20 @@
 	 "upgrade" : "On-Call Upgrade Assistance",
 
 	 "onprem" : "On-premises",
-	 "privatehosted" : "Private Hosted"
+	 "privatehosted" : "Private Hosted",
+
+
+	"ces.dealrefuse" : "We have a deal that you can't refuse",
+	 "cesoffer.joinus" : "Join us",
+	 "cesoffer.titleoffer" : "Standard",
+	 "cesoffer.earlybird" : "Early Bird",
+	 "cesoffer.joinfamily" : "Join Twake Family",
+	 "cesoffer.av1" : "All features from standard plan",
+	 "cesoffer.av2" : "Upgraded support",
+	 "cesoffer.av3" : "Free up to 50 users for 6 months",
+	 "cesoffer.av4" : "Life time deal after 6 months",
+	"cesoffer.join1" : "Join the Twake Family 🤗",
+	"cesoffer.join2" : "We offer to our first 10,000 entreprises a life time deal with a premium support and a close discussion with the Twake team.",
+	"cesoffer.join3" : "Start using Twake for free for 6 months and get a lifetime offer after 6 months.",
+	"cesoffer.compare" : "Learn more about our plans"
  }

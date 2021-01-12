@@ -3,6 +3,7 @@
   "subtitle": "All of the organizational tools you need to make your projects succeed brought together on one platform.",
   "tryForFree": "Use for free",
   "download": "Download",
+	"discoverTwake" : "Discover Twake",
   "downloadFor": "For",
   "goFar": "Go further with Twake",
   "adaptedSolution1": "A solution tailored",
@@ -67,7 +68,7 @@
   "security_encrypted_data": "Encrypted data",
   "security_encrypted_data_desc": "Our databases are encrypted and so are your files, so that only you decide who can access your data.",
   "security_location": "Located in Europe",
-  "security_location_desc": "Your files and data are stored entirely in Europe! Twake complies with GDRP regulations.",
+  "security_location_desc": "Your files and data are stored entirely in Europe! Twake complies with GDPR regulations.",
   "security_transfers": "Secure transfers",
   "security_transfers_desc": "HTTPS/SSL and end-to-end websockets communications enabled.",
   "security_onpremise": "On-premise offers",
@@ -75,6 +76,18 @@
   "opensource" : "open source",
   "opensourceSub" : "Twake is open source",
   "opensourceDescription" : "We are strongly committed to open source. Twake is an ethical, open and transparent collaborative platform. The result is a product that surpasses proprietary software and offers more value to our users. The source code of Twake is available on github. Check out our code and contribute to our community on github.",
+  "goodtech4good" : "#goodtech4good",
+  "goodtech4goodSub" : "We are building good tech for good !",
+  "goodtech4goodDescription" : "We are strongly committed to open source. Twake is an ethical, open and transparent collaborative platform. The result is a product that surpasses proprietary software and offers more value to our users. The source code of Twake is available on github. Check out our code and contribute to our community on github.",
+	"gt4g1Title" : "Sustainable Development",
+	"gt4g1Description" : "To contribute to the Sustainable Development Goals.",
+	"gt4g2Title" : "Certification",
+	"gt4g2Description" : "To work  towards achieving a B-Corp certification. ",
+	"gt4g3Title" : "Community",
+	"gt4g3Description" : "To engage, empower and support globally the Tech for Good community.",
+	"gt4g4Title" : "Carbon negative",
+	"gt4g4Description" : "To become carbon negative by 2025 and remove historical carbon emissions by 2030",
+
   "available": "Available",
   "available1": "everywhere",
   "mobileApp": "Mobile App",
@@ -103,5 +116,9 @@
   "more-on-tasks": "More on tasks",
   "more-on-channels": "More on channels",
   "more-on-calendar": "More on calendar",
-  "more-on-storage": "More on storage"
+  "more-on-storage": "More on storage",
+
+	"ces-title" : "CES lifetime offer!",
+	"ces-subtitle" : "First 10,000 entreprises to signup will get 6 months of free usage, and a lifetime discount after 6 months.",
+  "ces-subtitle2" : "Join the Twake family!"
 }
