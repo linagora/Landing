@@ -2518,3 +2518,61 @@ a.demoTitle:hover {
 .staySafe .colTitle{
 	max-width: 475px !important;
 }
+
+.pull-right{
+  float: right;
+}
+.pull-left{
+  float: left;
+}
+
+.card {
+    margin: 50px 0px;
+    border: none;
+}
+
+.card-header {
+  border: none;
+}
+
+.pics-tabs{
+  top: -100px;
+}
+
+.collapse.show {
+   background-color: #b3dcf2;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
+.more-videos, .set-active {
+  color: #918bfc !important;
+}
+
+.set-active {
+  font-weight: bold;
+}
+
+.accordion-header.disabled-accordion.card-header {
+  background-color: #f5f5f7;
+  border-radius: 20px;
+}
+
+.accordion-header.disabled-accordion.card-header a {
+  display: none;
+}
+
+.accordion-header.active-accordion.card-header {
+  background-color: #b3dcf2;
+}
+.accordion-header.active-accordion.card-header .set-active {
+  display: none;
+}
+
+.accordion-header, .accordion-header h4 {
+  font-weight: bold;
+}
+.accordion-header.active-accordion.card-header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

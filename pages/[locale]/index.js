@@ -10,7 +10,8 @@ import ChannelsPlayer from "../../components/reactChannelsPlayer";
 import CalendarPlayer from "../../components/reactCalendarPlayer";
 import FilePlayer from "../../components/reactFilePlayer";
 import { Modal } from "react-responsive-modal";
-import { Tabs, Tab, Panel } from '@bumaga/tabs' 
+import { Tabs, Tab, Panel } from '@bumaga/tabs';
+import { AiOutlineDown, AiFillPlayCircle } from 'react-icons/ai';
 
 const styles = {
   fontFamily: "sans-serif",
@@ -21,7 +22,11 @@ class Home extends React.Component {
     super(props);
     this.state = {
       carousselImg: 0,
-      open: false
+      open: false,
+      open1: false,
+      open2: true,
+      open3: true,
+      open4: true
     };
   }
 
@@ -56,10 +61,6 @@ class Home extends React.Component {
       open: !prevState.open
     }));
   };
-
-  // onCloseModal = () => {
-  //   this.setState({ open: false });
-  // };
 
   render() {
     const { open } = this.state;
@@ -171,29 +172,30 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
-          [New Bloc] - Create me here!!
           <section>
             <div className="container">
               <div className="row rowWithScreen">
-                <div className="col-lg-6">
-                  <div className="colTitle">
+                <div>
+                  <div className="colTitle col-lg-6">
                     <h1 className="title ">
                       {this.props.t(this.props, "team-collaboration")}
                     </h1>
                     <div className="subtitle ">
                       {this.props.t(this.props, "team-collaboration-desc")}
                     </div>
-                    ay ay ay!!
-                    <Tabs>
-                      <div>
+                  </div>
+                  <Tabs>
+                    <div className="col-lg-4 pull-left">
                         <Accordion defaultActiveKey="0">
                           <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="0">
-                                <h4>
+                            <Accordion.Toggle as={Card.Header} eventKey="0" className={"accordion-header " + (this.state.open1 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: !this.state.open1, open2: true, open3: true, open4: true })}>
+                                <h4 className="pull-left">
                                   {this.props.t(this.props, "tasks-accordion-title")}
                                 </h4>
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-tasks")} <AiFillPlayCircle /> </a>
+                              <AiOutlineDown className="pull-right set-active"/>
                                 <TasksPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                                 
                               </Accordion.Toggle>
@@ -204,12 +206,14 @@ class Home extends React.Component {
                             </Tab>
                             <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="1">
-                                <h4>
+                            <Accordion.Toggle as={Card.Header} eventKey="1" className={"accordion-header " + (this.state.open2 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: true, open2: !this.state.open2, open3: true, open4: true })}>
+                              <h4 className="pull-left">
                                   {this.props.t(this.props, "channels-accordion-title")}
                                 </h4>
 
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-channels")} <AiFillPlayCircle /></a>
+                              <AiOutlineDown className="pull-right set-active" />                             
                                 <ChannelsPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="1">
@@ -219,12 +223,14 @@ class Home extends React.Component {
                             </Tab>
                             <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="2">
-                                <h4>
+                            <Accordion.Toggle as={Card.Header} eventKey="2" className={"accordion-header " + (this.state.open3 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: true, open2: true, open3: !this.state.open3, open4: true })}>
+                              <h4 className="pull-left">
                                   {this.props.t(this.props, "calendar-accordion-title")}
                                 </h4>
 
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-calendar")} <AiFillPlayCircle /></a>
+                              <AiOutlineDown className="pull-right set-active" />
                                 <CalendarPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="2">
@@ -234,12 +240,13 @@ class Home extends React.Component {
                             </Tab>
                             <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="3">
-                                <h4>
+                            <Accordion.Toggle as={Card.Header} eventKey="3" className={"accordion-header " + (this.state.open4 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: true, open2: true, open3: true, open4: !this.state.open4 })}>
+                              <h4 className="pull-left">
                                   {this.props.t(this.props, "file-storage-accordion-title")}
                                 </h4>
-
-                                <button onClick={this.onOpenModal}>Play Video </button>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-storage")} <AiFillPlayCircle /></a>
+                              <AiOutlineDown className="pull-right set-active" />
                                 <FilePlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="3">
@@ -248,8 +255,8 @@ class Home extends React.Component {
                             </Card>
                           </Tab>
                         </Accordion>
-                      </div>
-                      <div>
+                    </div>
+                    <div className="col-lg-6 pull-right  pics-tabs">
                       <Panel>
                           <img
                           src="/medias/features/app_demo_1.jpg"
@@ -268,15 +275,12 @@ class Home extends React.Component {
                         src="/medias/features/app_demo_4.jpg"
                         alt="Twake Messages"
                       /></p></Panel>
-                      </div>
-                    </Tabs>
-                    yooooooooooooo
-                  </div>
+                    </div>
+                  </Tabs>
                 </div>
               </div>
             </div>
           </section>
-          [New Bloc] - Ends Here!!
           <section className="desktop-60-top">
             <div className="container">
               <div className="row">
