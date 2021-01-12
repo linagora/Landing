@@ -2,7 +2,7 @@ name: update-saas-landing
 
 on:
   push:
-    branches: [master,preprod]
+    branches: []
 
 jobs:
   build-frontend:
