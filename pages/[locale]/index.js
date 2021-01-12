@@ -196,8 +196,7 @@ class Home extends React.Component {
                                 </h4>
                               <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-tasks")} <AiFillPlayCircle /> </a>
                               <AiOutlineDown className="pull-right set-active"/>
-                                <TasksPlayer open={this.state.open} toggleModal={this.onOpenModal} />
-                                
+                                <TasksPlayer open={this.state.open} toggleModal={this.onOpenModal} />                                
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="0">
                                 <Card.Body>{this.props.t(this.props, "tasks-accordion-title-desc")}</Card.Body>
@@ -212,7 +211,11 @@ class Home extends React.Component {
                                   {this.props.t(this.props, "channels-accordion-title")}
                                 </h4>
 
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-channels")} <AiFillPlayCircle /></a>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">
+                                <div style={{display:"inline-block",marginRight:"4px"}}>
+                                  {this.props.t(this.props, "more-on-channels")}
+                                </div> 
+                                <AiFillPlayCircle /></a>
                               <AiOutlineDown className="pull-right set-active" />                             
                                 <ChannelsPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
@@ -259,20 +262,20 @@ class Home extends React.Component {
                     <div className="col-lg-6 pull-right  pics-tabs">
                       <Panel>
                           <img
-                          src="/medias/features/app_demo_1.jpg"
+                          src="/medias/features/app_demo_2.jpg"
                           alt="Twake Messages"
                           />
                       </Panel>
                       <Panel><p><img
-                        src="/medias/features/app_demo_2.jpg"
-                        alt="Twake Messages"
-                      /></p></Panel>
-                      <Panel><p><img
-                        src="/medias/features/app_demo_3.jpg"
+                        src="/medias/features/app_demo_1.jpg"
                         alt="Twake Messages"
                       /></p></Panel>
                       <Panel><p><img
                         src="/medias/features/app_demo_4.jpg"
+                        alt="Twake Messages"
+                      /></p></Panel>
+                      <Panel><p><img
+                        src="/medias/features/app_demo_3.jpg"
                         alt="Twake Messages"
                       /></p></Panel>
                     </div>

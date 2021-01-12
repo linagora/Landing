@@ -2533,6 +2533,7 @@ a.demoTitle:hover {
 
 .card-header {
   border: none;
+  padding: 12px 24px;
 }
 
 .pics-tabs{
@@ -2540,13 +2541,21 @@ a.demoTitle:hover {
 }
 
 .collapse.show {
-   background-color: #b3dcf2;
-   border-bottom-left-radius: 20px;
-   border-bottom-right-radius: 20px;
+   background-color: #F3F2FF;
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
 }
+
 
 .more-videos, .set-active {
   color: #918bfc !important;
+}
+.more-videos{
+  font-weight:600;
+}
+.more-videos:hover{
+  cursor : pointer;
+  color : var(--primary-hover) !important;
 }
 
 .set-active {
@@ -2555,7 +2564,7 @@ a.demoTitle:hover {
 
 .accordion-header.disabled-accordion.card-header {
   background-color: #f5f5f7;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .accordion-header.disabled-accordion.card-header a {
@@ -2563,7 +2572,7 @@ a.demoTitle:hover {
 }
 
 .accordion-header.active-accordion.card-header {
-  background-color: #b3dcf2;
+  background-color: #F3F2FF;
 }
 .accordion-header.active-accordion.card-header .set-active {
   display: none;
@@ -2573,6 +2582,6 @@ a.demoTitle:hover {
   font-weight: bold;
 }
 .accordion-header.active-accordion.card-header {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
