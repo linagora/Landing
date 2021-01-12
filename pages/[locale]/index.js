@@ -10,7 +10,8 @@ import ChannelsPlayer from "../../components/reactChannelsPlayer";
 import CalendarPlayer from "../../components/reactCalendarPlayer";
 import FilePlayer from "../../components/reactFilePlayer";
 import { Modal } from "react-responsive-modal";
-import { Tabs, Tab, Panel } from '@bumaga/tabs' 
+import { Tabs, Tab, Panel } from '@bumaga/tabs';
+import { AiOutlineDown, AiFillPlayCircle } from 'react-icons/ai';
 
 const styles = {
   fontFamily: "sans-serif",
@@ -21,7 +22,11 @@ class Home extends React.Component {
     super(props);
     this.state = {
       carousselImg: 0,
-      open: false
+      open: false,
+      open1: false,
+      open2: true,
+      open3: true,
+      open4: true
     };
   }
 
@@ -182,11 +187,13 @@ class Home extends React.Component {
                         <Accordion defaultActiveKey="0">
                           <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="0">
+                            <Accordion.Toggle as={Card.Header} eventKey="0" className={"accordion-header " + (this.state.open1 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: !this.state.open1, open2: true, open3: true, open4: true })}>
                                 <h4 className="pull-left">
                                   {this.props.t(this.props, "tasks-accordion-title")}
                                 </h4>
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-tasks")} <AiFillPlayCircle /> </a>
+                              <AiOutlineDown className="pull-right set-active"/>
                                 <TasksPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                                 
                               </Accordion.Toggle>
@@ -197,12 +204,14 @@ class Home extends React.Component {
                             </Tab>
                             <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="1">
+                            <Accordion.Toggle as={Card.Header} eventKey="1" className={"accordion-header " + (this.state.open2 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: true, open2: !this.state.open2, open3: true, open4: true })}>
                               <h4 className="pull-left">
                                   {this.props.t(this.props, "channels-accordion-title")}
                                 </h4>
 
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-channels")} <AiFillPlayCircle /></a>
+                              <AiOutlineDown className="pull-right set-active" />                             
                                 <ChannelsPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="1">
@@ -212,12 +221,14 @@ class Home extends React.Component {
                             </Tab>
                             <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="2">
+                            <Accordion.Toggle as={Card.Header} eventKey="2" className={"accordion-header " + (this.state.open3 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: true, open2: true, open3: !this.state.open3, open4: true })}>
                               <h4 className="pull-left">
                                   {this.props.t(this.props, "calendar-accordion-title")}
                                 </h4>
 
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-calendar")} <AiFillPlayCircle /></a>
+                              <AiOutlineDown className="pull-right set-active" />
                                 <CalendarPlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="2">
@@ -227,12 +238,13 @@ class Home extends React.Component {
                             </Tab>
                             <Tab>
                             <Card>
-                              <Accordion.Toggle as={Card.Header} eventKey="3">
+                            <Accordion.Toggle as={Card.Header} eventKey="3" className={"accordion-header " + (this.state.open4 ? "disabled-accordion" : "active-accordion")}
+                              onClick={() => this.setState({ open1: true, open2: true, open3: true, open4: !this.state.open4 })}>
                               <h4 className="pull-left">
                                   {this.props.t(this.props, "file-storage-accordion-title")}
                                 </h4>
-
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">Play Video </a>
+                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-storage")} <AiFillPlayCircle /></a>
+                              <AiOutlineDown className="pull-right set-active" />
                                 <FilePlayer open={this.state.open} toggleModal={this.onOpenModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="3">

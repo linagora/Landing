@@ -2533,7 +2533,6 @@ a.demoTitle:hover {
 
 .card-header {
   border: none;
-  background-color: #b3dcf2;
 }
 
 .pics-tabs{
@@ -2542,8 +2541,38 @@ a.demoTitle:hover {
 
 .collapse.show {
    background-color: #b3dcf2;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
 }
 
-.more-videos {
-  color: #918bfc;
+.more-videos, .set-active {
+  color: #918bfc !important;
+}
+
+.set-active {
+  font-weight: bold;
+}
+
+.accordion-header.disabled-accordion.card-header {
+  background-color: #f5f5f7;
+  border-radius: 20px;
+}
+
+.accordion-header.disabled-accordion.card-header a {
+  display: none;
+}
+
+.accordion-header.active-accordion.card-header {
+  background-color: #b3dcf2;
+}
+.accordion-header.active-accordion.card-header .set-active {
+  display: none;
+}
+
+.accordion-header, .accordion-header h4 {
+  font-weight: bold;
+}
+.accordion-header.active-accordion.card-header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }

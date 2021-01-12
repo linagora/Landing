@@ -99,5 +99,9 @@
   "calendar-accordion-title": "Calendar",
   "calendar-accordion-title-desc": "Create team events. Attach relevant files and task links. Configure notifications for various members. Set deadlines for tasks.",
   "file-storage-accordion-title": "File storage",
-  "file-storage-accordion-title-desc": "Easily access all your stored documents using our drag and drop file manager. Manage versions and labels. Edit your files with ease."
+  "file-storage-accordion-title-desc": "Easily access all your stored documents using our drag and drop file manager. Manage versions and labels. Edit your files with ease.",
+  "more-on-tasks": "More on tasks",
+  "more-on-channels": "More on channels",
+  "more-on-calendar": "More on calendar",
+  "more-on-storage": "More on storage"
 }
