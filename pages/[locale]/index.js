@@ -22,7 +22,10 @@ class Home extends React.Component {
     super(props);
     this.state = {
       carousselImg: 0,
-      open: false,
+      openTasksVideo: false,
+      openChannelsVideo: false,
+      openCalendarVideo: false,
+      openStorageVideo: false,
       open1: false,
       open2: true,
       open3: true,
@@ -56,9 +59,28 @@ class Home extends React.Component {
     }
     return ret;
   }
-  onOpenModal = () => {
+  
+  onOpenTasksModal = () => {
     this.setState(prevState => ({
-      open: !prevState.open
+      openTasks: !prevState.openTasks
+    }));
+  };
+
+  onOpenChannelsModal = () => {
+    this.setState(prevState => ({
+      openChannels: !prevState.openChannels
+    }));
+  };
+
+  onOpenCalendarModal = () => {
+    this.setState(prevState => ({
+      openCalendar: !prevState.openCalendar
+    }));
+  };
+
+  onOpenStorageModal = () => {
+    this.setState(prevState => ({
+      openStorage: !prevState.openStorage
     }));
   };
 
@@ -192,9 +214,9 @@ class Home extends React.Component {
                                 <h4 className="pull-left">
                                   {this.props.t(this.props, "tasks-accordion-title")}
                                 </h4>
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-tasks")} <AiFillPlayCircle /> </a>
+                              <a onClick={this.onOpenTasksModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-tasks")} <AiFillPlayCircle /> </a>
                               <AiOutlineDown className="pull-right set-active"/>
-                                <TasksPlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                                <TasksPlayer openTasks={this.state.openTasks} toggleModal={this.onOpenTasksModal} />
                                 
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="0">
@@ -210,9 +232,9 @@ class Home extends React.Component {
                                   {this.props.t(this.props, "channels-accordion-title")}
                                 </h4>
 
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-channels")} <AiFillPlayCircle /></a>
+                              <a onClick={this.onOpenChannelsModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-channels")} <AiFillPlayCircle /></a>
                               <AiOutlineDown className="pull-right set-active" />                             
-                                <ChannelsPlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                                <ChannelsPlayer openChannels={this.state.openChannels} toggleModal={this.onOpenChannelsModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="1">
                                 <Card.Body>{this.props.t(this.props, "channels-accordion-title-desc")}</Card.Body>
@@ -227,9 +249,9 @@ class Home extends React.Component {
                                   {this.props.t(this.props, "calendar-accordion-title")}
                                 </h4>
 
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-calendar")} <AiFillPlayCircle /></a>
+                              <a onClick={this.onOpenCalendarModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-calendar")} <AiFillPlayCircle /></a>
                               <AiOutlineDown className="pull-right set-active" />
-                                <CalendarPlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                                <CalendarPlayer openCalendar={this.state.openCalendar} toggleModal={this.onOpenCalendarModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="2">
                                 <Card.Body>{this.props.t(this.props, "calendar-accordion-title-desc")}</Card.Body>
@@ -243,9 +265,9 @@ class Home extends React.Component {
                               <h4 className="pull-left">
                                   {this.props.t(this.props, "file-storage-accordion-title")}
                                 </h4>
-                              <a onClick={this.onOpenModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-storage")} <AiFillPlayCircle /></a>
+                              <a onClick={this.onOpenStorageModal} className="pull-right more-videos">{this.props.t(this.props, "more-on-storage")} <AiFillPlayCircle /></a>
                               <AiOutlineDown className="pull-right set-active" />
-                                <FilePlayer open={this.state.open} toggleModal={this.onOpenModal} />
+                                <FilePlayer openStorage={this.state.openStorage} toggleModal={this.onOpenStorageModal} />
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="3">
                                 <Card.Body>{this.props.t(this.props, "file-storage-accordion-title-desc")}</Card.Body>
@@ -256,23 +278,37 @@ class Home extends React.Component {
                     </div>
                     <div className="col-lg-6 pull-right  pics-tabs">
                       <Panel>
+                        <a onClick={this.onOpenTasksModal}>
                           <img
                           src="/medias/features/app_demo_1.jpg"
                           alt="Twake Messages"
                           />
+                        </a>
                       </Panel>
-                      <Panel><p><img
+                      <Panel>
+                        <a onClick={this.onOpenChannelsModal}>
+                        <img
                         src="/medias/features/app_demo_2.jpg"
                         alt="Twake Messages"
-                      /></p></Panel>
-                      <Panel><p><img
+                      />
+                      </a>
+                      </Panel>
+                      <Panel>
+                        <a onClick={this.onOpenCalendarModal}>
+                        <img
                         src="/medias/features/app_demo_3.jpg"
                         alt="Twake Messages"
-                      /></p></Panel>
-                      <Panel><p><img
+                      />
+                      </a>
+                      </Panel>
+                      <Panel>
+                        <a onClick={this.onOpenStorageModal}>
+                        <img
                         src="/medias/features/app_demo_4.jpg"
                         alt="Twake Messages"
-                      /></p></Panel>
+                      />
+                      </a>
+                      </Panel>
                     </div>
                   </Tabs>
                 </div>

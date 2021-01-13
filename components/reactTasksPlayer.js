@@ -4,10 +4,10 @@ import Modal from "react-responsive-modal";
 
 class TasksPlayer extends Component {
   render() {
-    const { open, toggleModal } = this.props;
+    const { openTasks, toggleModal } = this.props;
     return (
       <Modal
-        open={open}
+        open={openTasks}
         onClose={toggleModal}
         styles={{
           modal: {

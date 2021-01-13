@@ -4,10 +4,10 @@ import Modal from "react-responsive-modal";
 
 class FilePlayer extends Component {
   render() {
-    const { open, toggleModal } = this.props;
+    const { openStorage, toggleModal } = this.props;
     return (
       <Modal
-        open={open}
+        open={openStorage}
         onClose={toggleModal}
         styles={{
           modal: {

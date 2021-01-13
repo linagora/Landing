@@ -2550,7 +2550,7 @@ a.demoTitle:hover {
 }
 
 .set-active {
-  font-weight: bold;
+  font-size: 20pxs;
 }
 
 .accordion-header.disabled-accordion.card-header {

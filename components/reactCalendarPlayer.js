@@ -4,10 +4,10 @@ import Modal from "react-responsive-modal";
 
 class CalendarPlayer extends Component {
   render() {
-    const { open, toggleModal } = this.props;
+    const { openCalendar, toggleModal } = this.props;
     return (
       <Modal
-        open={open}
+        open={openCalendar}
         onClose={toggleModal}
         styles={{
           modal: {

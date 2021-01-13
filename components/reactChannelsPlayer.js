@@ -4,10 +4,10 @@ import Modal from "react-responsive-modal";
 
 class ChannelsPlayer extends Component {
   render() {
-    const { open, toggleModal } = this.props;
+    const { openChannels, toggleModal } = this.props;
     return (
       <Modal
-        open={open}
+        open={openChannels}
         onClose={toggleModal}
         styles={{
           modal: {
