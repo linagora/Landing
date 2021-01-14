@@ -24,10 +24,10 @@ class Home extends React.Component {
     this.state = {
       carousselImg: 0,
       open: false,
-      open1: false,
-      open2: true,
-      open3: true,
-      open4: true,
+      open1: true,
+      open2: false,
+      open3: false,
+      open4: false,
 			isOpen : false,
 			openCalendar : false,
 			openChat : false,
@@ -66,15 +66,9 @@ class Home extends React.Component {
     }
     return ret;
   }
-  onOpenModal = () => {
-    this.setState(prevState => ({
-      open: !prevState.open
-    }));
-  };
 
   render() {
-    const { open } = this.state;
-
+    console.log(this.state);
     return (
       <Layout page="home">
         <div
@@ -202,114 +196,107 @@ class Home extends React.Component {
           <section>
             <div className="container">
               <div className="row rowWithScreen">
-                <div>
-                  <div className="colTitle col-lg-6">
+                  <div className="col-lg-5">
                     <h1 className="title ">
                       {this.props.t(this.props, "team-collaboration")}
                     </h1>
-                    <div className="subtitle ">
+                    <div className="subtitle " style={{marginBottom:"24px"}}>
                       {this.props.t(this.props, "team-collaboration-desc")}
                     </div>
-                  </div>
-                  <Tabs>
-                    <div className="col-lg-4 pull-left">
-                        <Accordion defaultActiveKey="0">
-                          <Tab>
-                            <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="0" className={"accordion-header " + (this.state.open1 ? "disabled-accordion" : "active-accordion")}
-                              onClick={() => this.setState({ open1: !this.state.open1, open2: true, open3: true, open4: true })}>
+                    <div className="">
+                          <Accordion defaultActiveKey="0">
+                              <Card>
+                                <Accordion.Toggle as={Card.Header} eventKey="0" className={"accordion-header " + (this.state.open1 ? "active-accordion" : "disabled-accordion")}
+                                  onClick={() => this.setState({ open1: true, open2: false, open3: false, open4: false })}>
+                                    <h4 className="pull-left">
+                                      {this.props.t(this.props, "tasks-accordion-title")}
+                                    </h4>
+                                  <a onClick={(e)=>{this.setState({openTask:true});e.preventDefault();e.stopPropagation();}} className="pull-right more-videos">{this.props.t(this.props, "more-on-tasks")} <AiFillPlayCircle /> </a>
+                                  {!this.state.open1 && <img className="svgDown" src="/medias/arrow-down.svg"/>}
+                                  <ModalVideo channel='youtube' autoplay isOpen={this.state.openTask} videoId="bgXWvjdk8ic" onClose={(e) => {this.setState({openTask:false});e.preventDefault();e.stopPropagation();}} />
+                                </Accordion.Toggle>
+                                <Accordion.Collapse eventKey="0">
+                                  <Card.Body>{this.props.t(this.props, "tasks-accordion-title-desc")}</Card.Body>
+                                </Accordion.Collapse>
+                              </Card>
+                              <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="1" className={"accordion-header " + (this.state.open2 ? "active-accordion" : "disabled-accordion")}
+                                onClick={() => this.setState({ open1: false, open2: true, open3: false, open4: false })}>
                                 <h4 className="pull-left">
-                                  {this.props.t(this.props, "tasks-accordion-title")}
-                                </h4>
-                              <a onClick={()=>this.setState({openTask:true})} className="pull-right more-videos">{this.props.t(this.props, "more-on-tasks")} <AiFillPlayCircle /> </a>
-                              <AiOutlineDown className="pull-right set-active"/>
-            										<ModalVideo channel='youtube' autoplay isOpen={this.state.openTask} videoId="bgXWvjdk8ic" onClose={() => this.setState({openTask:false})} />
-                              </Accordion.Toggle>
-                              <Accordion.Collapse eventKey="0">
-                                <Card.Body>{this.props.t(this.props, "tasks-accordion-title-desc")}</Card.Body>
-                              </Accordion.Collapse>
-                            </Card>
-                            </Tab>
-                            <Tab>
-                            <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="1" className={"accordion-header " + (this.state.open2 ? "disabled-accordion" : "active-accordion")}
-                              onClick={() => this.setState({ open1: true, open2: !this.state.open2, open3: true, open4: true })}>
-                              <h4 className="pull-left">
-                                  {this.props.t(this.props, "channels-accordion-title")}
-                                </h4>
+                                    {this.props.t(this.props, "channels-accordion-title")}
+                                  </h4>
 
-                              <a onClick={()=>this.setState({openChannel:true})} className="pull-right more-videos">
-                                <div style={{display:"inline-block",marginRight:"4px"}}>
-                                  {this.props.t(this.props, "more-on-channels")}
-                                </div> 
-                                <AiFillPlayCircle /></a>
-                              <AiOutlineDown className="pull-right set-active" />                             
-                                <ModalVideo channel='youtube' autoplay isOpen={this.state.openChannel} videoId="Yl98t9rzaII" onClose={() => this.setState({openChannel:false})} />
-                              </Accordion.Toggle>
-                              <Accordion.Collapse eventKey="1">
-                                <Card.Body>{this.props.t(this.props, "channels-accordion-title-desc")}</Card.Body>
-                              </Accordion.Collapse>
-                            </Card>
-                            </Tab>
-                            <Tab>
-                            <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="2" className={"accordion-header " + (this.state.open3 ? "disabled-accordion" : "active-accordion")}
-                              onClick={() => this.setState({ open1: true, open2: true, open3: !this.state.open3, open4: true })}>
-                              <h4 className="pull-left">
-                                  {this.props.t(this.props, "calendar-accordion-title")}
-                                </h4>
+                                <a onClick={()=>this.setState({openChannel:true})} className="pull-right more-videos">
+                                  <div style={{display:"inline-block",marginRight:"4px"}}>
+                                    {this.props.t(this.props, "more-on-channels")}
+                                  </div> 
+                                  <AiFillPlayCircle /></a>
+                                  {!this.state.open2 && <img className="svgDown" src="/medias/arrow-down.svg"/>}
+                                  <ModalVideo channel='youtube' autoplay isOpen={this.state.openChannel} videoId="Yl98t9rzaII" onClose={() => this.setState({openChannel:false})} />
+                                </Accordion.Toggle>
+                                <Accordion.Collapse eventKey="1">
+                                  <Card.Body>{this.props.t(this.props, "channels-accordion-title-desc")}</Card.Body>
+                                </Accordion.Collapse>
+                              </Card>
+                              <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="2" className={"accordion-header " + (this.state.open3 ? "active-accordion" : "disabled-accordion")}
+                                onClick={() => this.setState({ open1: false, open2: false, open3: true, open4: false })}>
+                                <h4 className="pull-left">
+                                    {this.props.t(this.props, "calendar-accordion-title")}
+                                  </h4>
 
-                              <a onClick={()=>this.setState({openCalendar:true})} className="pull-right more-videos">{this.props.t(this.props, "more-on-calendar")} <AiFillPlayCircle /></a>
-                              <AiOutlineDown className="pull-right set-active" />
-                                <ModalVideo channel='youtube' autoplay isOpen={this.state.openCalendar} videoId="k0-3xHGQRXA" onClose={() => this.setState({openCalendar:false})} />
-                              </Accordion.Toggle>
-                              <Accordion.Collapse eventKey="2">
-                                <Card.Body>{this.props.t(this.props, "calendar-accordion-title-desc")}</Card.Body>
-                              </Accordion.Collapse>
-                            </Card>
-                            </Tab>
-                            <Tab>
-                            <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="3" className={"accordion-header " + (this.state.open4 ? "disabled-accordion" : "active-accordion")}
-                              onClick={() => this.setState({ open1: true, open2: true, open3: true, open4: !this.state.open4 })}>
-                              <h4 className="pull-left">
-                                  {this.props.t(this.props, "file-storage-accordion-title")}
-                                </h4>
-                              <a onClick={()=>this.setState({openDocument:true})} className="pull-right more-videos">{this.props.t(this.props, "more-on-storage")} <AiFillPlayCircle /></a>
-                              <AiOutlineDown className="pull-right set-active" />
-                              <ModalVideo channel='youtube' autoplay isOpen={this.state.openDocument} videoId="2IbmJc9KdQA" onClose={() => this.setState({openDocument:false})} />
-                              </Accordion.Toggle>
-                              <Accordion.Collapse eventKey="3">
-                                <Card.Body>{this.props.t(this.props, "file-storage-accordion-title-desc")}</Card.Body>
-                              </Accordion.Collapse>
-                            </Card>
-                          </Tab>
-                        </Accordion>
-                    </div>
-                    <div className="col-lg-6 pull-right  pics-tabs">
-                      <Panel>
-                          <img
-                          src="/medias/features/app_demo_2.jpg"
-                          alt="Twake Messages"
-                          />
-                      </Panel>
-                      <Panel><p><img
+                                <a onClick={()=>this.setState({openCalendar:true})} className="pull-right more-videos">{this.props.t(this.props, "more-on-calendar")} <AiFillPlayCircle /></a>
+                                {!this.state.open3 && <img className="svgDown" src="/medias/arrow-down.svg"/>}
+                                  <ModalVideo channel='youtube' autoplay isOpen={this.state.openCalendar} videoId="k0-3xHGQRXA" onClose={() => this.setState({openCalendar:false})} />
+                                </Accordion.Toggle>
+                                <Accordion.Collapse eventKey="2">
+                                  <Card.Body>{this.props.t(this.props, "calendar-accordion-title-desc")}</Card.Body>
+                                </Accordion.Collapse>
+                              </Card>
+                              <Card>
+                                <Accordion.Toggle as={Card.Header} eventKey="3" className={"accordion-header " + (this.state.open4 ? "active-accordion" : "disabled-accordion")}
+                                  onClick={() => this.setState({ open1: false, open2: false, open3: false, open4: true })}>
+                                  <h4 className="pull-left">
+                                      {this.props.t(this.props, "file-storage-accordion-title")}
+                                    </h4>
+                                  <a onClick={()=>this.setState({openDocument:true})} className="pull-right more-videos">{this.props.t(this.props, "more-on-storage")} <AiFillPlayCircle /></a>
+                                  {!this.state.open4 && <img className="svgDown" src="/medias/arrow-down.svg"/>}
+                                  <ModalVideo channel='youtube' autoplay isOpen={this.state.openDocument} videoId="2IbmJc9KdQA" onClose={() => this.setState({openDocument:false})} />
+                                  </Accordion.Toggle>
+                                  <Accordion.Collapse eventKey="3">
+                                    <Card.Body>{this.props.t(this.props, "file-storage-accordion-title-desc")}</Card.Body>
+                                  </Accordion.Collapse>
+                              </Card>
+                          </Accordion>
+                      </div>
+                  </div>
+                  <div className="col-lg-5 pics-tabs offset-lg-1" style={{}}>
+                      <img
+                        src="/medias/features/app_demo_2.jpg"
+                        alt="Twake Messages"
+                        onClick={(e)=>{this.setState({openTask:true});e.preventDefault();e.stopPropagation();}}
+                        className={this.state.open1?"":"hide"}
+                      />
+                      <img
                         src="/medias/features/app_demo_1.jpg"
                         alt="Twake Messages"
-                      /></p></Panel>
-                      <Panel><p><img
+                        onClick={(e)=>{this.setState({openChat:true});e.preventDefault();e.stopPropagation();}}
+                        className={this.state.open2?"":"hide"}
+                      />
+                      <img
                         src="/medias/features/app_demo_4.jpg"
                         alt="Twake Messages"
-                      /></p></Panel>
-                      <Panel><p><img
+                        onClick={(e)=>{this.setState({openCalendar:true});e.preventDefault();e.stopPropagation();}}
+                        className={this.state.open3?"":"hide"}
+                      /><img
                         src="/medias/features/app_demo_3.jpg"
                         alt="Twake Messages"
-                      /></p></Panel>
-                    </div>
-                  </Tabs>
+                        onClick={(e)=>{this.setState({openDocument:true});e.preventDefault();e.stopPropagation();}}
+                        className={this.state.open4?"":"hide"}
+                      />
+                  </div>
                 </div>
               </div>
-            </div>
           </section>
           <section className="desktop-60-top">
             <div className="container">

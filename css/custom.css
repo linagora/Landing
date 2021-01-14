@@ -2538,23 +2538,54 @@ a.demoTitle:hover {
 }
 
 .card {
-    margin: 50px 0px;
+    margin: 12px 0px;
     border: none;
-}
+    background-color: #F3F2FF;
+    border-radius: 8px !important;
+  }
 
 .card-header {
   border: none;
   padding: 12px 24px;
 }
+.card-header .svgDown{
+  float: right;
+  margin-top: 10px;  
+}
 
 .pics-tabs{
-  top: -100px;
+  display: relative;
+  min-height: 300px;
+}
+.pics-tabs img{
+  height:720px;
+  position:absolute;
+  opacity: 1;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px 0 rgba(183, 183, 183, 0.5);
+  transform: translate(0px, 0px);
+  transition: transform 0.1s;
+}
+.pics-tabs img:hover{
+  cursor: pointer;
+  transform: translate(-90px, 0px);
+  transition: transform 0.3s;
+}
+
+@media(max-width:990px){
+  .pics-tabs img{
+    height:auto;
+    width:100%;
+    margin:0px;
+  }
+
+}
+.pics-tabs .hide{
+  opacity: 0;
+  z-index:-1;
 }
 
 .collapse.show {
-   background-color: #F3F2FF;
-   border-bottom-left-radius: 12px;
-   border-bottom-right-radius: 12px;
 }
 
 
@@ -2596,6 +2627,10 @@ a.demoTitle:hover {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+
+.accordion-
+
+
 /* gtfg */
 
 #landing .gtfgHeaderLink{
