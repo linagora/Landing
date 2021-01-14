@@ -274,20 +274,24 @@ class Home extends React.Component {
                       <img
                         src="/medias/features/app_demo_2.jpg"
                         alt="Twake Messages"
+                        onClick={(e)=>{this.setState({openTask:true});e.preventDefault();e.stopPropagation();}}
                         className={this.state.open1?"":"hide"}
                       />
                       <img
                         src="/medias/features/app_demo_1.jpg"
                         alt="Twake Messages"
+                        onClick={(e)=>{this.setState({openChat:true});e.preventDefault();e.stopPropagation();}}
                         className={this.state.open2?"":"hide"}
                       />
                       <img
                         src="/medias/features/app_demo_4.jpg"
                         alt="Twake Messages"
+                        onClick={(e)=>{this.setState({openCalendar:true});e.preventDefault();e.stopPropagation();}}
                         className={this.state.open3?"":"hide"}
                       /><img
                         src="/medias/features/app_demo_3.jpg"
                         alt="Twake Messages"
+                        onClick={(e)=>{this.setState({openDocument:true});e.preventDefault();e.stopPropagation();}}
                         className={this.state.open4?"":"hide"}
                       />
                   </div>

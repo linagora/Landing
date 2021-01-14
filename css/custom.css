@@ -2563,7 +2563,15 @@ a.demoTitle:hover {
   opacity: 1;
   border-radius: 12px;
   box-shadow: 0 16px 32px 0 rgba(183, 183, 183, 0.5);
+  transform: translate(0px, 0px);
+  transition: transform 0.1s;
 }
+.pics-tabs img:hover{
+  cursor: pointer;
+  transform: translate(-90px, 0px);
+  transition: transform 0.3s;
+}
+
 @media(max-width:990px){
   .pics-tabs img{
     height:auto;
@@ -2574,6 +2582,7 @@ a.demoTitle:hover {
 }
 .pics-tabs .hide{
   opacity: 0;
+  z-index:-1;
 }
 
 .collapse.show {
