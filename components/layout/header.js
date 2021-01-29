@@ -77,7 +77,8 @@ const Header = ({ t, scrolled, getLang }) => {
 							}}
               href={"https://beta.twake.app"}
             >
-              {t({ router: router }, "tryForFree")}
+							<span>{t({ router: router }, "tryForFree_1")}</span>
+							<span style={{marginLeft:"0px",fontWeight:"300"}}>{t({ router: router }, "tryForFree_2")}</span>
             </Nav.Link>
           </Nav.Item>
         </Navbar.Collapse>
