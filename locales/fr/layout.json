@@ -1,5 +1,7 @@
 {
     "menu" : "Menu",
+		"tryForFree_1" : "Essayez",
+	  "tryForFree_2" : " - C'est gratuit",
     "product" : "Produit",
     "pricing" : "Tarifs",
     "community" : "Communauté",

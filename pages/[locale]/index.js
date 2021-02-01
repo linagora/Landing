@@ -100,7 +100,8 @@ class Home extends React.Component {
 													});
 												}}
                       >
-                        {this.props.t(this.props, "tryForFree")}
+												<span>{this.props.t(this.props, "tryForFree_1")}</span>
+												<span style={{marginLeft:"0px",fontWeight:"300"}}>{this.props.t(this.props, "tryForFree_2")}</span>
                       </a>
                       <a
                         className="discoverLink"
@@ -229,7 +230,7 @@ class Home extends React.Component {
                                 <a onClick={()=>this.setState({openChannel:true})} className="pull-right more-videos">
                                   <div style={{display:"inline-block",marginRight:"4px"}}>
                                     {this.props.t(this.props, "more-on-channels")}
-                                  </div> 
+                                  </div>
                                   <AiFillPlayCircle /></a>
                                   {!this.state.open2 && <img className="svgDown" src="/medias/arrow-down.svg"/>}
                                   <ModalVideo channel='youtube' autoplay isOpen={this.state.openChannel} videoId="Yl98t9rzaII" onClose={() => this.setState({openChannel:false})} />
