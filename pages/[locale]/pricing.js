@@ -1,6 +1,7 @@
 import { withTranslation } from "../../i18n";
 import Layout from "../../components/layout/layout";
 import { useState } from "react";
+import { Tooltip,OverlayTrigger } from "react-bootstrap";
 
 const Pricing = (props) => {
   let [open1, setOpen1] = useState(false);
@@ -56,11 +57,11 @@ const Pricing = (props) => {
 					},
 					{
 						name : "video",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
+						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"march")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"march")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
 					},
 					{
 						name : "office",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
+						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
 					},
 					{
 						name : "guest",
@@ -68,7 +69,7 @@ const Pricing = (props) => {
 					},
 					{
 						name : "email",
-						available : ["",props.t(props,"comingsoon"),true,true],
+						available : ["",<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
 					},
 				],
 			},
@@ -77,11 +78,11 @@ const Pricing = (props) => {
 				features : [
 					{
 						name : "strongpasswordpolicy",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
+						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
 					},
 					{
 						name : "2fa",
-						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),props.t(props,"comingsoon"),props.t(props,"comingsoon")],
+						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>],
 					},
 					{
 						name : "ssoauthentification",
@@ -491,7 +492,8 @@ const Pricing = (props) => {
 														<tr className="tfeature">
 															<td className="featureName">{props.t(props,feat.name)}</td>
 															{
-																feat.available.map(available =>(
+																feat.available.map(available =>{
+																	return(
 																	<td style={{verticalAlign:"middle"}}>{
 																		(available.length && available.length)>0?
 																			<span dangerouslySetInnerHTML={{__html:available}}></span>
@@ -500,9 +502,9 @@ const Pricing = (props) => {
 																			?
 																				<img style={{width:"16px"}} src="/medias/check-alt-green.png" alt="" />
 																			:
-																				""
+																				available
 																	}</td>
-																))
+																);})
 															}
 														</tr>
 													)

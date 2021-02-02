@@ -109,6 +109,9 @@
   "resources" : "Resources",
   "onboarding" : "Accompagnement",
   "deployment" : "Déployement",
+	"april" : "Avril",
+	"march" : "Mars",
+	"july" : "Juillet",
 
 
   "ces.dealrefuse" : "Nous avons une offre que vous ne pouvez pas refuser",
