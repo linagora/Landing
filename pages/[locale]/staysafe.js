@@ -142,7 +142,6 @@ class StaySafe extends React.Component {
                       maxHeight: "75vw"
                     }}
                   >
-                    <img src="/medias/features/all_in_one_image.svg" />
                   </iframe>
                 </div>
               </div>
@@ -160,7 +159,6 @@ class StaySafe extends React.Component {
                       maxHeight: "75vw"
                     }}
                   >
-                    <img src="/medias/features/telework.svg" />
                   </iframe>
                 </div>
                 <div className="col-lg-6 d-lg-block">

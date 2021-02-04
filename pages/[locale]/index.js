@@ -133,7 +133,7 @@ class Home extends React.Component {
                   <div style={{ position: "relative" }}>
                     <img
                       className="imgScreen placeholderImage carousselImgViewed overview"
-                      src="/medias/whatistwake.png"
+                      src="/medias/whatistwake.jpg"
                       alt="Twake Messages"
 											onClick={()=>this.setState({isOpen : true})}
                     />
@@ -351,7 +351,6 @@ class Home extends React.Component {
                       maxHeight: "75vw"
                     }}
                   >
-                    <img src="/medias/features/all_in_one_image.svg" />
                   </iframe>
                 </div>
               </div>
@@ -369,7 +368,6 @@ class Home extends React.Component {
                       maxHeight: "75vw"
                     }}
                   >
-                    <img src="/medias/features/telework.svg" />
                   </iframe>
                 </div>
                 <div className="col-lg-6 d-lg-block">
