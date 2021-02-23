@@ -57,7 +57,7 @@
   "task": "Tâche",
   "video": "Réunion",
   "office": "Office",
-  "guest": "Utiliateur invité",
+  "guest": "Utilisateur invité",
   "email": "Email",
   "fileSharing": "Partage de fichiers",
   "teamSpace": "Team Spaces",
@@ -109,6 +109,9 @@
   "resources" : "Resources",
   "onboarding" : "Accompagnement",
   "deployment" : "Déployement",
+	"april" : "Avril",
+	"march" : "Mars",
+	"july" : "Juillet",
 
 
   "ces.dealrefuse" : "Nous avons une offre que vous ne pouvez pas refuser",
