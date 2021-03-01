@@ -57,11 +57,11 @@ const Pricing = (props) => {
 					},
 					{
 						name : "video",
-						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"march")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"march")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
+						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
 					},
 					{
 						name : "office",
-						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
+						available : ["","",true,true],
 					},
 					{
 						name : "guest",
@@ -69,7 +69,7 @@ const Pricing = (props) => {
 					},
 					{
 						name : "email",
-						available : ["",<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
+						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
 					},
 				],
 			},
@@ -82,7 +82,7 @@ const Pricing = (props) => {
 					},
 					{
 						name : "2fa",
-						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>],
+						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
 					},
 					{
 						name : "ssoauthentification",
@@ -106,20 +106,25 @@ const Pricing = (props) => {
 					},
 					{
 						name : "encryption",
-						available : [false,true,true,true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 					{
 						name : "fileEncryption",
-						available : [true,true,true,true],
+						available : ["","","",true],
+
+					},
+					{
+						name : "e2e",
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),props.t(props,"comingsoon"),props.t(props,"comingsoon")],
 
 					},
 					{
 						name : "advancedSecurity",
-						available : [false,true,true,true],
+						available : [false,false,true,true],
 					},
 					{
 						name : "deviceManagement",
-						available : [false,true,true,true],
+						available : [false,false,true,true],
 					}
 				]
 			},
@@ -140,7 +145,7 @@ const Pricing = (props) => {
 					},
 					{
 						name : "inPerson",
-						available : [false,true,true,true],
+						available : [false,false,false,true],
 					},
 					{
 						name : "99uptime",
