@@ -9,6 +9,7 @@ const Pricing = (props) => {
   let [open3, setOpen3] = useState(false);
   let [open4, setOpen4] = useState(false);
   let [open5, setOpen5] = useState(false);
+	// comment to delete
 
 	let plans = {
 		saas : [
