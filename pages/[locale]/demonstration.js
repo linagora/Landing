@@ -11,7 +11,7 @@ const Demo = props => {
 	});
   return (
     <Layout page={"demonstrationTitle"}>
-      <div
+      { /*<div
         className="container-fluid"
         style={{ overflowX: "hidden" }}
         id="requestDemo"
@@ -42,7 +42,7 @@ const Demo = props => {
             </div>
           </div>
         </section>
-      </div>
+      </div> */ }
     </Layout>
   );
 };
