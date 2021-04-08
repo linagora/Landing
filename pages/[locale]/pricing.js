@@ -58,7 +58,7 @@ const Pricing = (props) => {
 					},
 					{
 						name : "video",
-						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 					{
 						name : "office",
@@ -70,7 +70,7 @@ const Pricing = (props) => {
 					},
 					{
 						name : "email",
-						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 				],
 			},
@@ -79,11 +79,11 @@ const Pricing = (props) => {
 				features : [
 					{
 						name : "strongpasswordpolicy",
-						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"april")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 					{
 						name : "2fa",
-						available : [<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,<OverlayTrigger overlay={<Tooltip id="tooltip-disabled">{props.t(props,"july")} 2021</Tooltip>}><span>{props.t(props,"comingsoon")}</span></OverlayTrigger>,true,true],
+						available : [props.t(props,"comingsoon"),props.t(props,"comingsoon"),true,true],
 					},
 					{
 						name : "ssoauthentification",
@@ -481,7 +481,10 @@ const Pricing = (props) => {
 										<tr>
 											<th style={{ border: "none" }} scope="col"></th>
 											{plans[saasMode?"saas":"selhosted"].map(plan =>(
-												<th>{props.t(props,plan)}</th>
+												(plan == "premium" || plan == "entreprise") ?
+													<th><div>{props.t(props,plan)}</div><span style={{fontWeight:"400", fontSize:"14px"}}>{props.t(props,"comingsoon")}</span></th>
+													:
+													<th>{props.t(props,plan)}</th>
 											))}
 										</tr>
 									</thead>

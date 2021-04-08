@@ -741,6 +741,9 @@ h2 {
 	text-align: center;
 	border:solid 1px var(--grey_light);
 }
+.pricingTable thead th{
+	vertical-align: top;
+}
 .pricingTable th{
 	width:180px;
 	text-align: center;
@@ -2550,7 +2553,7 @@ a.demoTitle:hover {
 }
 .card-header .svgDown{
   float: right;
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 .pics-tabs{

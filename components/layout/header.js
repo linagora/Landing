@@ -56,7 +56,7 @@ const Header = ({ t, scrolled, getLang }) => {
               <NavDropdown.Item href="https://community.twake.app">{t({ router: router }, "forum")}</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          {/*<Nav.Item className="nav-item">
+          <Nav.Item className="nav-item">
           	<Nav.Link className="nav-link"
 							onClick = {()=>{
 										analytics.track('TryForFree_click',{
@@ -66,7 +66,7 @@ const Header = ({ t, scrolled, getLang }) => {
 									href="https://beta.twake.app">
               {t({ router: router }, "connection")}
             </Nav.Link>
-          </Nav.Item>*/}
+          </Nav.Item>
           <Nav.Item className="nav-item">
             <Nav.Link
               className="nav-link btn-purple"
@@ -75,7 +75,7 @@ const Header = ({ t, scrolled, getLang }) => {
 									from : "Header_signup"
 								});
 							}}
-              href={"https://beta.twake.app"}
+              href={"https://console.twake.app/signup"}
             >
 							<span>{t({ router: router }, "tryForFree_1")}</span>
 							<span style={{marginLeft:"0px",fontWeight:"300"}}>{t({ router: router }, "tryForFree_2")}</span>
