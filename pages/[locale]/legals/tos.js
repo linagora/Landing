@@ -7,14 +7,14 @@ const Tos = () => (
         <br />
         <br />
         Read more :{" "}
-        <a href="/files/TOS.pdf" target="_BLANK">
-          tos.pdf
+        <a href="/files/tos.md" target="_BLANK">
+          tos.md
         </a>
         <br />
         <br />
         <br />
         <hr />
-        <script>document.location = "/files/TOS.pdf";</script>
+        <script>document.location = "/files/tos.md";</script>
       </section>
     </div>
   </Layout>

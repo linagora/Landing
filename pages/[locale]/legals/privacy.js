@@ -13,8 +13,8 @@ const Privacy = props => (
         mobile and browser Twake application. Any capitalized terms not defined
         in our Privacy Policy, have the meaning as specified in our Terms of Use
         accessible at{" "}
-        <a href="https://twake.app/files/TOS.pdf" target="_BLANK">
-          https://twake.app/files/TOS.pdf
+        <a href="https://twake.app/files/tos.md" target="_BLANK">
+          https://twake.app/files/tos.md
         </a>
         <br />
         Your Privacy
