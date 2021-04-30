@@ -27,10 +27,10 @@ const Layout = props => {
 			window.analytics.page();
 			}}();`}}/>
 			<script type="text/javascript" dangerouslySetInnerHTML={{__html:`window.$crisp=[];window.CRISP_WEBSITE_ID="9ef1628b-1730-4044-b779-72ca48893161";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`}}></script>
-			<script dangerouslySetInnerHTML={{__html:`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-121796059-2');`}}></script>
 			<script type="text/javascript" dangerouslySetInnerHTML={{__html:`window.ltwAsyncInit = function(){init_multiplegl('https://gl.hostcg.com/',[['https://gl.hostcg.com/','2034','hh0r8vrr7i']]);};`}}></script>
 			<script type="text/javascript" src="https://gl.hostcg.com/js/genlead.js" defer></script>
 			<noscript><img src="https://gl.hostcg.com/js/tracker.php?idsite=2034&clesite=hh0r8vrr7i" style={{border:"0"}} alt="" /></noscript>
+			<script async defer data-domain="twake.app" src="https://plausible.io/js/plausible.js"></script>
 
 				<meta
 					name="viewport"
