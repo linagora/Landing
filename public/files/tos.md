@@ -96,7 +96,7 @@ In the event that Contents available through the Services platform created by LI
 
 # Payment conditions
 
-By purchasing a subscription to the Services, User agrees to pay in advance the full annual subscription fees indicated for said Service. Payments will be due as of the first day User signs up for the Services, and will cover an annual period, as indicated when signing up.
+By purchasing a subscription to the Services, User agrees to pay in advance the full annual or monthly subscription fees indicated for said Service. Payments will be due as of the first day User signs up for the Services, and will cover an annual or monthly period, as indicated when signing up.
 
 Configurations and prices of the Services are subject to change at any time, and LINAGORA shall at all times be entitled to modify configurations, fees, prices and quotations, provided that no price changes shall be made applicable to User during a subscription term, and shall only take effect after LINAGORA and User have agreed upon an extension, upgrade or renewal of the subscription term.
 
@@ -122,15 +122,9 @@ Considering that activation of the Services is immediate upon payment of the sub
 
 User does not benefit from any cooling-off period enabling him to receive a full refund upon retraction / cancellation of the Services subscription.
 
-In case of cancellation by a User during a subscription term, the Services will continue until the end of the paid subscription period, without any refund.
+In case of cancellation by a User during a subscription term, the Services will continue until the end of the paid subscription period.
 
-In order to cancel his subscription, User must 
-
-__FOR NOW__
-send a mail to contact@twake.app and say that User wants to cancel his subscription.
-__IN JULY__
-go in the console page > "Subscription" > "Change plan" > "Cancel plan"
-
+In order to cancel his subscription, User must __INDICATE TECHNICAL PROCESS__
 
 
 # Trademarks
@@ -141,19 +135,7 @@ Twake and the LINAGORA logo are registered trademarks owned by LINAGORA. Any una
 
 The Services platform is hosted by OVH Cloud.
 
-__UPDATED__
-Third-party subservices :
-* Chargebee
-* Adyen
-* Segment
-* Amplitude
-* Customer.io
-* Google Analytics
-* Google Tag Manager
-* Yandex
-* LinkedIn Insight
-* Facebook Pixel
-* Twitter Pixel
+__TO BE COMPLETED__
 
 # Disclaimer of warranties & limitation of liability
 
